@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UPSC History Mastery 2027 — Scrutiny Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a14;
+  --bg2:#0f0f1e;
+  --bg3:#14142a;
+  --panel:#1a1a2e;
+  --panel2:#1e1e38;
+  --border:#2a2a4a;
+  --gold:#e8b84b;
+  --gold2:#f5d07a;
+  --gold3:#fae8a0;
+  --red:#e85050;
+  --teal:#38c9b8;
+  --purple:#9b59b6;
+  --blue:#4a9eff;
+  --green:#4ecb71;
+  --orange:#f39c12;
+  --pink:#e91e8c;
+  --white:#f0eee8;
+  --muted:#8888aa;
+  --accent1:#6c63ff;
+  --accent2:#ff6584;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Libre Baskerville',Georgia,serif;
+  background:var(--bg);
+  color:var(--white);
+  font-size:15px;
+  line-height:1.8;
+  min-height:100vh;
+}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px;}
+
+/* ====== HEADER ====== */
+.header{
+  position:relative;
+  background:linear-gradient(135deg,#06061a 0%,#0d0d2b 40%,#12122a 100%);
+  padding:0;
+  overflow:hidden;
+  border-bottom:2px solid var(--gold);
+}
+.header::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 15% 50%,rgba(232,184,75,0.12) 0%,transparent 55%),
+    radial-gradient(ellipse at 85% 30%,rgba(108,99,255,0.1) 0%,transparent 50%),
+    radial-gradient(ellipse at 50% 100%,rgba(56,201,184,0.07) 0%,transparent 40%);
+}
+.header-particles{position:absolute;inset:0;overflow:hidden;}
+.particle{
+  position:absolute;width:2px;height:2px;background:var(--gold);border-radius:50%;
+  animation:float linear infinite;opacity:0;
+}
+@keyframes float{
+  0%{transform:translateY(100vh) translateX(0);opacity:0;}
+  10%{opacity:.6;}
+  90%{opacity:.6;}
+  100%{transform:translateY(-20px) translateX(30px);opacity:0;}
+}
+.header-inner{
+  position:relative;z-index:2;
+  padding:2.5rem 2rem 2rem;
+  max-width:1300px;margin:0 auto;
+  display:flex;align-items:center;gap:2rem;flex-wrap:wrap;
+}
+/* LOGO */
+.logo-ring{
+  width:110px;height:110px;border-radius:50%;
+  background:radial-gradient(circle at 38% 35%,#1e2d6a,#07091f);
+  border:3px solid var(--gold);
+  box-shadow:0 0 40px rgba(232,184,75,.35),0 0 80px rgba(232,184,75,.1);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  flex-shrink:0;position:relative;cursor:pointer;
+  animation:pulse-ring 3s ease-in-out infinite;
+}
+@keyframes pulse-ring{
+  0%,100%{box-shadow:0 0 40px rgba(232,184,75,.35),0 0 80px rgba(232,184,75,.1);}
+  50%{box-shadow:0 0 60px rgba(232,184,75,.6),0 0 120px rgba(232,184,75,.2);}
+}
+.logo-ring::before{
+  content:'';position:absolute;inset:5px;border-radius:50%;
+  border:1px solid rgba(232,184,75,.3);
+}
+.logo-sa{
+  font-family:'Raleway',sans-serif;font-size:2rem;font-weight:900;
+  color:white;line-height:1;letter-spacing:-2px;
+}
+.logo-sa em{color:var(--gold);font-style:normal;}
+.logo-fire{font-size:1rem;margin-bottom:2px;}
+.logo-txt{
+  font-family:'Raleway',sans-serif;font-size:.32rem;
+  letter-spacing:2px;color:var(--gold);text-align:center;margin-top:3px;
+  text-transform:uppercase;font-weight:700;
+}
+.header-content{flex:1;}
+.h-eyebrow{
+  font-family:'Raleway',sans-serif;font-size:.65rem;
+  letter-spacing:4px;color:var(--teal);text-transform:uppercase;
+  margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;
+}
+.h-eyebrow::before,.h-eyebrow::after{content:'';height:1px;width:30px;background:var(--teal);flex-shrink:0;}
+.header-content h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.8rem,4vw,3rem);font-weight:900;
+  color:white;line-height:1.15;margin-bottom:.6rem;
+}
+.header-content h1 .glow{
+  color:var(--gold);
+  text-shadow:0 0 30px rgba(232,184,75,.7);
+}
+.header-content p{
+  font-family:'Raleway',sans-serif;
+  font-size:.88rem;color:rgba(255,255,255,.65);letter-spacing:.5px;
+}
+.stat-strip{
+  display:flex;flex-wrap:wrap;gap:.8rem;
+  margin-top:1.5rem;padding-top:1.5rem;
+  border-top:1px solid rgba(232,184,75,.15);
+}
+.stat-pill{
+  background:rgba(232,184,75,.08);border:1px solid rgba(232,184,75,.25);
+  border-radius:30px;padding:.4rem 1rem;
+  display:flex;align-items:center;gap:.5rem;
+}
+.stat-pill .n{
+  font-family:'Raleway',sans-serif;font-size:1.1rem;
+  font-weight:900;color:var(--gold2);
+}
+.stat-pill .l{font-size:.68rem;color:rgba(255,255,255,.55);letter-spacing:.5px;}
+
+/* ====== NAV ====== */
+.nav{
+  background:rgba(10,10,20,.97);
+  border-bottom:1px solid rgba(232,184,75,.2);
+  position:sticky;top:0;z-index:200;
+  backdrop-filter:blur(12px);
+}
+.nav-inner{
+  max-width:1300px;margin:0 auto;
+  display:flex;overflow-x:auto;gap:0;
+  scrollbar-width:none;
+}
+.nav-inner::-webkit-scrollbar{display:none;}
+.nb{
+  background:none;border:none;color:rgba(255,255,255,.5);
+  font-family:'Raleway',sans-serif;font-size:.72rem;
+  letter-spacing:1.5px;text-transform:uppercase;font-weight:700;
+  padding:.9rem 1.1rem;cursor:pointer;white-space:nowrap;
+  border-bottom:3px solid transparent;transition:all .25s;
+  position:relative;
+}
+.nb:hover{color:var(--gold2);}
+.nb.active{color:var(--gold2);border-bottom-color:var(--gold);}
+
+/* ====== SECTIONS ====== */
+.sec{display:none;}
+.sec.active{display:block;}
+.container{max-width:1300px;margin:0 auto;padding:2.5rem 1.5rem;}
+
+/* ====== CHAPTER HEADERS ====== */
+.era-band{
+  display:flex;align-items:center;gap:1rem;
+  margin:2.5rem 0 1rem;
+  padding:.9rem 1.4rem;
+  border-radius:10px;
+  position:relative;overflow:hidden;
+}
+.era-band::before{content:'';position:absolute;inset:0;opacity:.07;background:var(--era-bg,var(--gold));}
+.era-band-icon{font-size:1.5rem;flex-shrink:0;}
+.era-band-text h3{
+  font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;
+  color:var(--era-col,var(--gold));margin-bottom:.1rem;
+}
+.era-band-text p{font-family:'Raleway',sans-serif;font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:1px;}
+.era-badge{
+  margin-left:auto;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+  border-radius:20px;padding:.2rem .8rem;
+  font-family:'Raleway',sans-serif;font-size:.65rem;
+  color:rgba(255,255,255,.6);font-weight:700;letter-spacing:1px;white-space:nowrap;
+}
+
+/* ====== TOPIC CARDS ====== */
+.tcard{
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:12px;margin-bottom:1rem;
+  transition:all .25s;overflow:hidden;
+  border-left:4px solid var(--tc-color,var(--gold));
+}
+.tcard:hover{border-color:var(--tc-color,var(--gold));box-shadow:0 6px 30px rgba(0,0,0,.5);}
+.tcard-head{
+  padding:.9rem 1.3rem;cursor:pointer;
+  display:flex;align-items:flex-start;gap:1rem;justify-content:space-between;
+}
+.tcard-main{flex:1;}
+.tcard-meta{
+  font-family:'Raleway',sans-serif;font-size:.62rem;
+  letter-spacing:2px;text-transform:uppercase;
+  color:var(--tc-color,var(--gold));margin-bottom:.25rem;
+  display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;
+}
+.imp-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--tc-color,var(--gold));flex-shrink:0;
+}
+.tcard-title{
+  font-family:'Playfair Display',serif;font-size:.98rem;font-weight:700;
+  color:var(--white);line-height:1.3;
+}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.4rem;}
+.tag{
+  font-family:'Raleway',sans-serif;font-size:.6rem;
+  padding:.15rem .55rem;border-radius:8px;font-weight:700;
+  letter-spacing:.5px;text-transform:uppercase;
+}
+.tag-pyq{background:rgba(232,184,75,.15);color:var(--gold);border:1px solid rgba(232,184,75,.3);}
+.tag-mains{background:rgba(56,201,184,.12);color:var(--teal);border:1px solid rgba(56,201,184,.3);}
+.tag-prelims{background:rgba(74,158,255,.12);color:var(--blue);border:1px solid rgba(74,158,255,.3);}
+.tag-art{background:rgba(155,89,182,.12);color:var(--purple);border:1px solid rgba(155,89,182,.3);}
+
+.tcard-arrow{
+  color:var(--tc-color,var(--gold));font-size:.9rem;
+  transition:transform .3s;flex-shrink:0;margin-top:.2rem;
+}
+.tcard.open .tcard-arrow{transform:rotate(180deg);}
+.tcard-body{
+  display:none;padding:0 1.3rem 1.2rem;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+.tcard.open .tcard-body{display:block;}
+.tcard-body p{font-size:.88rem;margin:.5rem 0;color:rgba(255,255,255,.85);line-height:1.75;}
+.tcard-body strong{color:var(--gold2);}
+.tcard-body ul{padding-left:1.1rem;margin:.4rem 0;}
+.tcard-body li{font-size:.85rem;margin-bottom:.3rem;color:rgba(255,255,255,.8);}
+
+.pyq-pill{
+  background:rgba(232,184,75,.08);border:1px solid rgba(232,184,75,.25);
+  border-radius:8px;padding:.8rem 1rem;margin-top:.8rem;
+  font-size:.83rem;font-family:'Raleway',sans-serif;
+}
+.pyq-pill strong{display:block;color:var(--gold);margin-bottom:.3rem;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;}
+
+.ans-tip{
+  background:rgba(56,201,184,.07);border:1px solid rgba(56,201,184,.2);
+  border-radius:8px;padding:.8rem 1rem;margin-top:.7rem;
+  font-size:.82rem;font-family:'Raleway',sans-serif;
+}
+.ans-tip strong{display:block;color:var(--teal);margin-bottom:.3rem;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;}
+
+/* ====== TIMELINE ====== */
+.timeline{position:relative;padding-left:2rem;}
+.timeline::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;
+  width:2px;background:linear-gradient(180deg,var(--gold),var(--teal),var(--purple),var(--pink),var(--blue));
+}
+.tl-item{
+  position:relative;margin-bottom:1.5rem;
+  padding-left:1.5rem;
+}
+.tl-dot{
+  position:absolute;left:-2.3rem;top:.5rem;
+  width:14px;height:14px;border-radius:50%;
+  background:var(--tl-color,var(--gold));
+  border:2px solid var(--bg);
+  box-shadow:0 0 10px var(--tl-color,var(--gold));
+  flex-shrink:0;
+}
+.tl-year{
+  font-family:'Raleway',sans-serif;font-weight:900;
+  font-size:.75rem;letter-spacing:2px;
+  color:var(--tl-color,var(--gold));margin-bottom:.2rem;
+}
+.tl-title{
+  font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;
+  color:white;margin-bottom:.3rem;
+}
+.tl-desc{font-size:.82rem;color:rgba(255,255,255,.7);line-height:1.65;}
+.tl-era-break{
+  margin:2rem 0 1.5rem;
+  padding:.5rem 1rem;
+  background:linear-gradient(90deg,rgba(232,184,75,.15),transparent);
+  border-left:3px solid var(--gold);
+  font-family:'Raleway',sans-serif;font-size:.8rem;
+  color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;
+}
+
+/* ====== QA SECTION ====== */
+.qa-card{
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:12px;margin-bottom:1.2rem;overflow:hidden;
+  transition:all .2s;
+}
+.qa-card:hover{border-color:rgba(232,184,75,.3);}
+.qa-q{
+  padding:.9rem 1.3rem;cursor:pointer;
+  display:flex;gap:1rem;align-items:flex-start;justify-content:space-between;
+  background:linear-gradient(90deg,rgba(232,184,75,.06),transparent);
+}
+.qa-num{
+  font-family:'Raleway',sans-serif;font-size:.65rem;
+  letter-spacing:2px;color:var(--gold);font-weight:700;
+  white-space:nowrap;flex-shrink:0;
+}
+.qa-qtext{
+  font-family:'Playfair Display',serif;font-size:.95rem;
+  color:white;flex:1;line-height:1.45;
+}
+.qa-arr{color:var(--gold);font-size:.9rem;transition:transform .3s;flex-shrink:0;}
+.qa-card.open .qa-arr{transform:rotate(180deg);}
+.qa-body{display:none;padding:1rem 1.3rem 1.2rem;border-top:1px solid rgba(255,255,255,.06);}
+.qa-card.open .qa-body{display:block;}
+.model-ans{
+  background:rgba(78,203,113,.06);border-left:3px solid var(--green);
+  border-radius:0 8px 8px 0;padding:1rem 1.1rem;margin:.5rem 0;
+}
+.model-ans h4{
+  font-family:'Raleway',sans-serif;font-size:.65rem;
+  letter-spacing:2px;color:var(--green);text-transform:uppercase;margin-bottom:.6rem;
+}
+.model-ans p{font-size:.87rem;color:rgba(255,255,255,.85);margin:.4rem 0;line-height:1.7;}
+.score-badge{
+  background:rgba(232,184,75,.08);border:1px solid rgba(232,184,75,.2);
+  border-radius:8px;padding:.7rem 1rem;margin-top:.7rem;
+  font-size:.82rem;font-family:'Raleway',sans-serif;
+}
+.score-badge strong{color:var(--gold);display:block;margin-bottom:.3rem;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;}
+
+/* ====== ANSWER GUIDE ====== */
+.ag-card{
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:14px;margin-bottom:1.5rem;overflow:hidden;
+}
+.ag-head{
+  padding:1rem 1.4rem;
+  background:linear-gradient(90deg,var(--panel2),var(--panel));
+  border-bottom:1px solid var(--border);
+}
+.ag-head h3{
+  font-family:'Playfair Display',serif;font-size:1rem;
+  color:var(--gold2);
+}
+.ag-body{padding:1.3rem 1.4rem;}
+.step-list{counter-reset:s;}
+.step-item{
+  display:flex;gap:1rem;margin-bottom:1rem;align-items:flex-start;
+}
+.step-item::before{
+  counter-increment:s;content:counter(s);
+  min-width:30px;height:30px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--orange));
+  color:var(--bg);font-family:'Raleway',sans-serif;
+  font-size:.8rem;font-weight:900;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.step-text strong{
+  display:block;font-family:'Raleway',sans-serif;
+  font-size:.8rem;font-weight:700;color:var(--gold2);margin-bottom:.2rem;
+}
+.step-text{font-size:.85rem;color:rgba(255,255,255,.8);}
+
+/* ====== PYQ ANALYSIS ====== */
+.analysis-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;
+  margin-bottom:2rem;
+}
+.ag-stat{
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:12px;padding:1.3rem;
+  border-top:3px solid var(--asc,var(--gold));
+  transition:transform .2s;
+}
+.ag-stat:hover{transform:translateY(-3px);}
+.ag-stat-num{
+  font-family:'Raleway',sans-serif;font-size:2.5rem;
+  font-weight:900;color:var(--asc,var(--gold));
+  line-height:1;margin-bottom:.3rem;
+}
+.ag-stat-lbl{font-family:'Raleway',sans-serif;font-size:.72rem;color:rgba(255,255,255,.55);letter-spacing:1px;}
+.ag-stat-desc{font-size:.82rem;color:rgba(255,255,255,.7);margin-top:.5rem;line-height:1.5;}
+
+/* ====== FLASHCARDS ====== */
+.fc-toolbar{
+  display:flex;flex-wrap:wrap;gap:.5rem;
+  margin-bottom:1.2rem;align-items:center;
+}
+.fc-filter{
+  padding:.3rem .9rem;border-radius:20px;
+  border:1px solid rgba(255,255,255,.15);background:transparent;
+  font-family:'Raleway',sans-serif;font-size:.68rem;
+  color:rgba(255,255,255,.6);cursor:pointer;letter-spacing:.5px;
+  font-weight:700;transition:all .2s;
+}
+.fc-filter.on{
+  background:var(--gold);color:var(--bg);border-color:var(--gold);
+}
+.fc-counter-label{
+  margin-left:auto;font-family:'Raleway',sans-serif;
+  font-size:.78rem;color:var(--muted);
+}
+.fc-prog{
+  height:3px;background:rgba(255,255,255,.1);border-radius:2px;
+  margin-bottom:1.5rem;overflow:hidden;
+}
+.fc-prog-fill{
+  height:100%;background:linear-gradient(90deg,var(--gold),var(--teal));
+  border-radius:2px;transition:width .3s;
+}
+.fc-stage{display:flex;flex-direction:column;align-items:center;}
+.fc-wrap{
+  width:100%;max-width:720px;height:280px;
+  perspective:1200px;cursor:pointer;margin-bottom:1.5rem;
+}
+.fc-inner{
+  width:100%;height:100%;position:relative;
+  transform-style:preserve-3d;transition:transform .6s cubic-bezier(.4,0,.2,1);
+}
+.fc-wrap.flip .fc-inner{transform:rotateY(180deg);}
+.fc-f,.fc-b{
+  position:absolute;inset:0;border-radius:18px;
+  backface-visibility:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:2rem;text-align:center;
+}
+.fc-f{
+  background:linear-gradient(135deg,#0d0d28,#1a1a40);
+  border:2px solid var(--gold);
+  box-shadow:0 10px 40px rgba(0,0,0,.5),inset 0 1px 0 rgba(232,184,75,.1);
+}
+.fc-f .fc-lbl{
+  font-family:'Raleway',sans-serif;font-size:.6rem;
+  letter-spacing:3px;color:var(--gold);text-transform:uppercase;
+  margin-bottom:.8rem;
+}
+.fc-f .fc-q{
+  font-family:'Playfair Display',serif;font-size:1.2rem;
+  color:white;line-height:1.5;
+}
+.fc-f .fc-cat{
+  position:absolute;top:.8rem;right:1rem;
+  font-family:'Raleway',sans-serif;font-size:.58rem;
+  color:rgba(255,255,255,.3);letter-spacing:1px;text-transform:uppercase;
+}
+.fc-b{
+  background:linear-gradient(135deg,#0a1a10,#0f2a1e);
+  border:2px solid var(--teal);
+  transform:rotateY(180deg);
+  box-shadow:0 10px 40px rgba(0,0,0,.5);
+}
+.fc-b .fc-lbl{
+  font-family:'Raleway',sans-serif;font-size:.6rem;
+  letter-spacing:3px;color:var(--teal);text-transform:uppercase;
+  margin-bottom:.8rem;
+}
+.fc-b .fc-a{
+  font-family:'Libre Baskerville',serif;font-size:.9rem;
+  color:rgba(255,255,255,.9);line-height:1.65;
+}
+.fc-controls{
+  display:flex;gap:.8rem;align-items:center;margin-bottom:1rem;
+}
+.btn{
+  background:var(--panel2);color:var(--white);border:1px solid var(--border);
+  border-radius:8px;padding:.55rem 1.3rem;
+  font-family:'Raleway',sans-serif;font-size:.72rem;
+  letter-spacing:1px;text-transform:uppercase;font-weight:700;
+  cursor:pointer;transition:all .2s;
+}
+.btn:hover{background:var(--border);border-color:var(--gold);}
+.btn-gold{background:var(--gold);color:var(--bg);border-color:var(--gold);}
+.btn-gold:hover{background:var(--gold2);}
+
+/* ====== SHORT NOTES ====== */
+.notes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.1rem;}
+.note-card{
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:12px;padding:1.3rem;
+  border-top:4px solid var(--nc-color,var(--gold));
+  transition:transform .2s;
+}
+.note-card:hover{transform:translateY(-3px);}
+.note-card h3{
+  font-family:'Playfair Display',serif;font-size:.92rem;
+  color:var(--nc-color,var(--gold));margin-bottom:.7rem;
+  padding-bottom:.5rem;border-bottom:1px solid rgba(255,255,255,.08);
+}
+.note-card ul{padding-left:1rem;}
+.note-card li{
+  font-size:.8rem;margin-bottom:.35rem;
+  line-height:1.55;color:rgba(255,255,255,.8);
+}
+.note-card li strong{color:var(--nc-color,var(--gold2));}
+
+/* ====== MOTIVATION ====== */
+.motive-section{
+  background:linear-gradient(135deg,var(--bg2),var(--bg3));
+  padding:5rem 2rem;text-align:center;
+  position:relative;overflow:hidden;
+  border-top:2px solid rgba(232,184,75,.2);
+}
+.motive-section::before{
+  content:'❝';position:absolute;top:-3rem;left:2rem;
+  font-size:20rem;color:rgba(232,184,75,.04);
+  font-family:'Playfair Display',serif;line-height:1;
+}
+.motive-quote{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.4rem,3vw,2rem);font-style:italic;
+  color:white;max-width:750px;margin:0 auto 1.5rem;
+  line-height:1.55;position:relative;
+}
+.motive-quote em{color:var(--gold2);font-style:normal;}
+.motive-div{
+  width:60px;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  margin:1.5rem auto;
+}
+.motive-cite{
+  font-family:'Raleway',sans-serif;font-size:.7rem;
+  letter-spacing:3px;color:var(--gold);text-transform:uppercase;
+}
+
+/* ====== FOOTER ====== */
+footer{
+  background:var(--bg);
+  border-top:2px solid var(--gold);
+  padding:2rem;text-align:center;
+  font-family:'Raleway',sans-serif;font-size:.78rem;
+  color:rgba(255,255,255,.4);
+}
+footer strong{color:var(--gold);}
+
+/* ====== MISC ====== */
+.intro-box{
+  background:linear-gradient(135deg,rgba(232,184,75,.08),rgba(108,99,255,.05));
+  border:1px solid rgba(232,184,75,.2);border-radius:14px;
+  padding:1.5rem;margin-bottom:2rem;
+  display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap;
+}
+.intro-box h2{
+  font-family:'Playfair Display',serif;font-size:1.1rem;
+  color:var(--gold2);margin-bottom:.4rem;
+}
+.intro-box p{font-family:'Raleway',sans-serif;font-size:.83rem;color:rgba(255,255,255,.7);}
+.section-title{
+  font-family:'Playfair Display',serif;font-size:1.5rem;
+  color:white;margin-bottom:.3rem;
+}
+.section-sub{
+  font-family:'Raleway',sans-serif;font-size:.78rem;
+  color:var(--muted);letter-spacing:1px;margin-bottom:1.5rem;
+}
+.highlight-box{
+  background:rgba(232,184,75,.07);border:1px solid rgba(232,184,75,.2);
+  border-radius:10px;padding:1rem 1.2rem;margin:.7rem 0;
+  font-size:.85rem;font-family:'Raleway',sans-serif;
+  color:rgba(255,255,255,.8);
+}
+
+/* Responsive */
+@media(max-width:640px){
+  .header-inner{flex-direction:column;text-align:center;}
+  .h-eyebrow{justify-content:center;}
+  .stat-strip{justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- Particle effect -->
+<div class="header">
+  <div class="header-particles" id="particles"></div>
+  <div class="header-inner">
+    <div class="logo-ring" title="Scrutiny Academy">
+      <div class="logo-fire">🔥</div>
+      <div class="logo-sa">S<em>A</em></div>
+      <div class="logo-txt">SCRUTINY<br>ACADEMY</div>
+    </div>
+    <div class="header-content">
+      <div class="h-eyebrow">UPSC CSE 2027 Preparation</div>
+      <h1>Indian & World <span class="glow">History</span><br>Complete Mastery Guide</h1>
+      <p>Focused Learning. Real Results. | Ancient → Medieval → Modern → World History</p>
+      <div class="stat-strip">
+        <div class="stat-pill"><span class="n">15</span><span class="l">Chapters</span></div>
+        <div class="stat-pill"><span class="n">100</span><span class="l">Flashcards</span></div>
+        <div class="stat-pill"><span class="n">25+</span><span class="l">Model Q&As</span></div>
+        <div class="stat-pill"><span class="n">50+</span><span class="l">PYQs Covered</span></div>
+        <div class="stat-pill"><span class="n">3000+</span><span class="l">Years Timeline</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <button class="nb active" onclick="showSec('notes',this)">📚 Short Notes</button>
+    <button class="nb" onclick="showSec('timeline',this)">⏳ Timeline</button>
+    <button class="nb" onclick="showSec('pyq',this)">📜 PYQ Analysis</button>
+    <button class="nb" onclick="showSec('qa',this)">✍️ Q&A Writing</button>
+    <button class="nb" onclick="showSec('ansguide',this)">🏆 Score Full Marks</button>
+    <button class="nb" onclick="showSec('flashcards',this)">🃏 Flashcards</button>
+  </div>
+</nav>
+
+<!-- ========================= SHORT NOTES ========================= -->
+<div id="notes" class="sec active">
+<div class="container">
+  <div class="intro-box">
+    <div style="font-size:2.5rem">📖</div>
+    <div>
+      <h2>Quick Revision Notes — UPSC History 2027</h2>
+      <p>Colour-coded by era. Click any card to expand full notes. High-priority topics for Mains GS-I are marked. Ancient → Medieval → Modern → World History covered completely.</p>
+    </div>
+  </div>
+
+  <!-- ANCIENT INDIA -->
+  <div class="era-band" style="--era-bg:#e8b84b;--era-col:#e8b84b;">
+    <div class="era-band-icon">🏺</div>
+    <div class="era-band-text">
+      <h3>ANCIENT INDIA</h3>
+      <p>CHAPTER 1–4 | 3000 BCE – 700 CE</p>
+    </div>
+    <div class="era-badge">UPSC GS-I UNIT 1</div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#e8b84b;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot"></div>HIGH PRIORITY · Ancient India</div>
+        <div class="tcard-title">Indus Valley Civilisation (IVC) — 2500–1750 BCE</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ 2015,2018,2021</span><span class="tag tag-mains">Mains GS-I</span><span class="tag tag-prelims">Prelims</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>Sites:</strong> Harappa (Pakistan, Ravi R.), Mohenjo-daro (Pakistan, Indus R. – "Mound of Dead"), Lothal (Gujarat – dockyard, bead factory), Kalibangan (Rajasthan – fire altars, ploughed field), Dholavira (Gujarat – stadium, water reservoirs), Rakhigarhi (Haryana – largest IVC site in India), Banawali (Haryana – fire altars).</p>
+      <p><strong>Key Features:</strong> Town planning – grid pattern, underground drainage (most advanced of ancient world). Great Bath at Mohenjo-daro. Script – undeciphered (pictographic, 400 signs). Trade with Mesopotamia (Dilmun = Bahrain). Bronze Age. Absence of temples. No iron, no horse evidence.</p>
+      <p><strong>Economy:</strong> Agriculture (wheat, barley, cotton – first to cultivate). Trade (weights & measures standardized). Craft (bronze, bead, pottery).</p>
+      <p><strong>Decline Theories:</strong> Aryan invasion (Max Muller – discredited), Floods (Mackay), Tectonic changes (Lambrick), Ecological degradation (Fairservis), Epidemic (Wheeler).</p>
+      <div class="pyq-pill"><strong>📜 PYQ 2021 (Prelims)</strong> "With reference to Indus Valley Civilisation, which of the following statement(s) is/are correct? — Standardised weights and measures were used." Also appeared in Mains 2018: "How has the maritime trade of the Indus Valley Civilisation contributed to its prosperity?"</div>
+    </div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#e8b84b;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot"></div>HIGH PRIORITY · Vedic Age</div>
+        <div class="tcard-title">Vedic Period — Rigvedic (1500–1000 BCE) & Later (1000–600 BCE)</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ 2014,2016,2020</span><span class="tag tag-mains">Mains</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>Rigvedic Period:</strong> Aryans entered India ~1500 BCE. Settled Punjab/Sapta Sindhu. Rig Veda (10 mandals, 1028 hymns). Society: Pastoral, Tribal (Kula → Grama → Vis → Jana). No caste rigidity. Women participated in assembly. Sabha & Samiti (democratic assemblies). Cattle (Gavishti = war for cattle). Bali = voluntary tribute.</p>
+      <p><strong>Later Vedic:</strong> Eastward expansion to Ganga plains. Agriculture dominant. Varna system rigid. 4 Vedas: Rigveda, Samaveda, Yajurveda, Atharvaveda. Upanishads (philosophy), Aranyakas, Brahmanas. New kingdoms (janapadas). Ashvamedha yagna for kingship. Sabha lost importance; women excluded.</p>
+      <p><strong>Literature:</strong> Vedic Texts → 6 Vedangas → Upanishads (108, basis of Vedanta). Brihadaranyaka, Chandogya = major Upanishads.</p>
+      <div class="pyq-pill"><strong>📜 PYQ 2020 (Mains)</strong> "Discuss the transition from Rigvedic to Later Vedic society and its impact on the status of women."</div>
+    </div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#e8b84b;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot"></div>HIGH PRIORITY · Religion</div>
+        <div class="tcard-title">Buddhism & Jainism — 6th Century BCE</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ 2013,2015,2017,2022</span><span class="tag tag-mains">Mains</span><span class="tag tag-art">Art & Culture</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>Buddhism:</strong> Siddhartha Gautama (563–483 BCE), born Lumbini (Nepal). Enlightenment at Bodh Gaya (Peepal tree). First sermon Sarnath (Dhammachakrapravartana = turning wheel of Dharma). Death (Mahaparinirvana) at Kushinagar, 483 BCE. Four Noble Truths (Dukkha, Samudaya, Nirodha, Magga). Eight-fold Path (Ashtangika Marga). No God, no soul. Three Jewels: Buddha, Dhamma, Sangha.</p>
+      <p><strong>Buddhist Councils:</strong> 1st (483 BCE, Rajagriha, Ajatashatru) – Tripitaka compiled. 2nd (383 BCE, Vaishali, Kalasoka) – Hinayana/Mahayana split. 3rd (250 BCE, Pataliputra, Ashoka) – Moggaliputta Tissa. 4th (1st century CE, Kashmir/Kundalvana, Kanishka) – Mahayana confirmed.</p>
+      <p><strong>Jainism:</strong> 24 Tirthankaras. Vardhamana Mahavira (599–527 BCE) – 24th Tirthankara, born Vaishali. Five vows: Ahimsa, Satya, Asteya, Brahmacharya, Aparigraha. Digambara (sky-clad) vs Shvetambara (white-clad). Trishashtilakshana Purna (Hemachandra) – key text.</p>
+      <div class="pyq-pill"><strong>📜 PYQ 2022 (Prelims)</strong> "Which of the Buddhist Councils resulted in the split into Hinayana and Mahayana sects?" — Ans: 2nd Council.</div>
+    </div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#e8b84b;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot"></div>HIGH PRIORITY · Polity</div>
+        <div class="tcard-title">Maurya Empire (321–185 BCE) — Chandragupta, Bindusara, Ashoka</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ 2014,2016,2018,2019,2023</span><span class="tag tag-mains">Mains</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>Chandragupta Maurya (321–297 BCE):</strong> Founded empire, defeated Nandas with Chanakya's help. Defeated Seleucus Nicator (305 BCE) → got Afghanistan, Balochistan. Arthashastra by Kautilya/Chanakya = statecraft manual. Megasthenes (Greek ambassador) wrote Indica. Last years as Jain monk (Shravanabelagola).</p>
+      <p><strong>Ashoka (268–232 BCE):</strong> Kalinga War (261 BCE) → conversion to Buddhism → Dhamma policy. 14 Major Rock Edicts, 7 Pillar Edicts. Sent missionaries: Mahendra (son) to Sri Lanka, Sanghamitra (daughter) to Sri Lanka with Bodhi tree. Dhamma: Ahimsa, religious tolerance, welfare of people, respect for elders. National Emblem from Sarnath Lion Capital. "India's greatest king" (H.G. Wells).</p>
+      <p><strong>Arthashastra:</strong> Saptanga theory (7 elements of state). Espionage system. Rigid bureaucracy. Amatya (ministers). Mahamatras (superintendents). Provincial administration.</p>
+      <div class="pyq-pill"><strong>📜 PYQ 2019 (Mains)</strong> "Assess the impact of Ashokan Dhamma on Indian polity and society." / "The Arthashastra of Kautilya is considered a treatise on statecraft. Critically examine."</div>
+    </div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#38c9b8;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot" style="background:var(--teal)"></div>MEDIUM PRIORITY · Post-Maurya</div>
+        <div class="tcard-title">Gupta Empire (320–550 CE) — Golden Age of India</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ 2015,2020</span><span class="tag tag-mains">Mains</span><span class="tag tag-art">Art & Culture</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>Key Rulers:</strong> Chandragupta I (320 CE, founder, "Maharajadhiraja"). Samudragupta (335–375 CE) – "Napoleon of India" (V. Smith), Allahabad Pillar inscription (Harishena). Chandragupta II/Vikramaditya (375–415 CE) – peak, Ujjain capital, Mehrauli iron pillar (no rust!). Fahien (Chinese traveler, 405 CE).</p>
+      <p><strong>Achievements:</strong> Literature – Kalidasa (Meghadutam, Abhijnanashakuntalam, Kumarasambhavam), Vishakhadatta (Mudrarakshasa). Science – Aryabhata (zero, π value, earth rotation, solar year), Varahamihira (Brihat Samhita), Brahmagupta. Sushruta Samhita (surgery). Nalanda University (4th-7th CE). Land grants to Brahmins → feudalism begins.</p>
+      <div class="pyq-pill"><strong>📜 PYQ 2020</strong> "Gupta period is considered the golden age of ancient India. Justify with examples."</div>
+    </div>
+  </div>
+
+  <!-- MEDIEVAL INDIA -->
+  <div class="era-band" style="--era-bg:#9b59b6;--era-col:#b47ed1;">
+    <div class="era-band-icon">🕌</div>
+    <div class="era-band-text">
+      <h3>MEDIEVAL INDIA</h3>
+      <p>CHAPTER 5–8 | 700 CE – 1750 CE</p>
+    </div>
+    <div class="era-badge">UPSC GS-I UNIT 2</div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#b47ed1;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot" style="background:#b47ed1"></div>HIGH PRIORITY · Sultanate</div>
+        <div class="tcard-title">Delhi Sultanate (1206–1526) — Five Dynasties</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ 2013,2016,2018,2021</span><span class="tag tag-mains">Mains</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>Five Dynasties:</strong></p>
+      <ul>
+        <li><strong>Slave/Mamluk (1206–90):</strong> Qutb-ud-din Aibak (founder), Iltutmish (consolidated, Iqta system), Razia Sultan (first female ruler), Balban (iron & blood policy, sijda/paibos).</li>
+        <li><strong>Khilji (1290–1320):</strong> Alauddin Khilji – market reforms (4 markets), Mongol defeats (6 times), Deccan campaigns (Malik Kafur), price control, token currency.</li>
+        <li><strong>Tughlaq (1320–1414):</strong> Ghiyasuddin Tughlaq, Muhammad bin Tughlaq (capital shift Delhi→Daulatabad, token currency, Khorasan plan – all failed!), Firuz Shah Tughlaq (hospitals, canals, Diwan-i-Khairat).</li>
+        <li><strong>Sayyid (1414–51):</strong> Weak dynasty. Timur's invasion aftermath.</li>
+        <li><strong>Lodi (1451–1526):</strong> Ibrahim Lodi. First Battle of Panipat (1526) → Babur defeats Ibrahim → Mughal rule begins.</li>
+      </ul>
+      <p><strong>Administration:</strong> Iqta system (revenue assignment). Diwan-i-Wizarat (Revenue), Diwan-i-Arz (Military), Diwan-i-Insha (Correspondence), Diwan-i-Rasalat (Appeals). Ulema had major influence.</p>
+      <div class="pyq-pill"><strong>📜 PYQ 2021 (Mains)</strong> "The economic reforms of Alauddin Khilji were revolutionary for their time but ultimately unsustainable. Comment."</div>
+    </div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#b47ed1;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot" style="background:#b47ed1"></div>HIGH PRIORITY · Mughal</div>
+        <div class="tcard-title">Mughal Empire (1526–1707) — Babur to Aurangzeb</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ 2013,2015,2017,2019,2022</span><span class="tag tag-mains">Mains</span><span class="tag tag-art">Art</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>Key Emperors:</strong></p>
+      <ul>
+        <li><strong>Babur (1526–30):</strong> Founder. Baburnama (autobiography). Used gunpowder. Panipat I (1526), Khanwa (1527), Ghagra (1529).</li>
+        <li><strong>Humayun (1530–40, 1555–56):</strong> Lost to Sher Shah Suri (Chausa 1539, Kanauj 1540). Exile to Persia. Regained throne. Died 1556 (library stairs accident).</li>
+        <li><strong>Sher Shah Suri (1540–45):</strong> Sur Empire. Grand Trunk Road. Rupee currency. Land survey (Zabti system). Reorganized army. "UPSC loves him!" – died at Kalinjar siege.</li>
+        <li><strong>Akbar (1556–1605):</strong> Greatest Mughal. Panipat II (1556, Hemu). Din-i-Ilahi (1582). Ibadat Khana (1575). Sulh-i-kul (peace with all). Abolished Jizya (1564). Rajput policy (matrimonial alliances). Mansabdari system. Nine gems (Navratna): Birbal, Tansen, Abul Fazl (Ain-i-Akbari, Akbarnama), Todar Mal, Man Singh etc. Fatehpur Sikri built.</li>
+        <li><strong>Jahangir (1605–27):</strong> Nur Jahan (wife, real power). Tuzuk-i-Jahangiri. Naturalist. Captain Hawkins, Thomas Roe (British ambassadors). Justice chain (Zanjir-i-Adl).</li>
+        <li><strong>Shah Jahan (1628–58):</strong> Taj Mahal (for Mumtaz), Red Fort, Jama Masjid. Peacock Throne. Daughter Jahanara, son Dara Shikoh. "Golden age of Mughal architecture."</li>
+        <li><strong>Aurangzeb (1658–1707):</strong> Alamgir. Reimposed Jizya (1679). Destroyed temples. Deccan campaigns (exhausted empire). Shivaji conflict. Last great Mughal. Wrote Fatawa-i-Alamgiri. Empire began declining.</li>
+      </ul>
+      <div class="pyq-pill"><strong>📜 PYQ 2022 (Mains)</strong> "The Mughal Empire declined due to both internal weaknesses and external pressures. Analyse." | PYQ 2019: "How did Akbar's religious policies contribute to the consolidation of the Mughal Empire?"</div>
+    </div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#b47ed1;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot" style="background:#b47ed1"></div>HIGH PRIORITY · Bhakti-Sufi</div>
+        <div class="tcard-title">Bhakti & Sufi Movement — 7th–17th Century CE</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ 2014,2017,2020,2023</span><span class="tag tag-mains">Mains</span><span class="tag tag-art">Culture</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>Bhakti Movement Saints:</strong></p>
+      <ul>
+        <li><strong>Alvars & Nayanmars</strong> (Tamil, 7th–10th CE) – devotion to Vishnu/Shiva</li>
+        <li><strong>Ramanuja</strong> (12th CE) – Vishishtadvaita philosophy</li>
+        <li><strong>Basavanna</strong> (12th CE, Karnataka) – Lingayat/Veerashaiva movement</li>
+        <li><strong>Ramananda</strong> (14th–15th CE) – opened Bhakti to all castes, guru of Kabir</li>
+        <li><strong>Kabir</strong> (15th CE, Varanasi) – weaver, rejected caste and rituals, dohas</li>
+        <li><strong>Mirabai</strong> (16th CE, Rajasthan) – devotee of Krishna, challenged caste</li>
+        <li><strong>Tukaram</strong> (17th CE, Maharashtra) – abhang poems, Warkari tradition</li>
+        <li><strong>Chaitanya Mahaprabhu</strong> (15th–16th CE, Bengal) – Vaishnavism revival</li>
+        <li><strong>Guru Nanak</strong> (15th–16th CE) – founded Sikhism, oneness of God</li>
+      </ul>
+      <p><strong>Sufi Orders (Silsilas):</strong> Chishti (most popular India – Moinuddin Chishti, Ajmer; Nizamuddin Auliya, Delhi; Qutbuddin Bakhtiyar Kaki). Suhrawardi (Bahauddin Zakariya). Qadiri (Shah Abdul Qadir Jilani). Naqshbandi (Shaikh Baqi Billah).</p>
+      <p><strong>Significance:</strong> Challenged caste, promoted equality, vernacular literature (growth of Hindi, Marathi, Punjabi, Bengali), social reform, Hindu-Muslim unity, democratized religion.</p>
+      <div class="pyq-pill"><strong>📜 PYQ 2023 (Mains)</strong> "The Bhakti movement not only brought religious reform but also contributed to social and cultural transformation. Elaborate."</div>
+    </div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#b47ed1;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot" style="background:#b47ed1"></div>HIGH PRIORITY · Maratha</div>
+        <div class="tcard-title">Maratha Empire (1674–1818) — Shivaji to Peshwas</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ 2016,2021</span><span class="tag tag-mains">Mains</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>Shivaji (1627–1680):</strong> Founded Maratha kingdom. Guerrilla warfare (ganimi kava). Coronation 1674 (Raigad). Ashtapradhan (8 ministers: Peshwa/PM, Amatya/Finance, etc.). Chauth (1/4 revenue) + Sardeshmukhi (1/10 extra) from non-Maratha territories. Killed Afzal Khan (1659). Escaped Agra prison (1666). Enemy of Aurangzeb.</p>
+      <p><strong>Peshwa Period (1713–1818):</strong> Peshwa Balaji Vishwanath (1713) – real power. Baji Rao I (greatest Peshwa, 1720–40) – never lost a battle. Balaji Baji Rao (Nanasaheb) – Panipat III (1761) vs Ahmad Shah Abdali = massive Maratha defeat. British finally defeated Marathas: 3rd Anglo-Maratha War (1817–18).</p>
+      <div class="pyq-pill"><strong>📜 PYQ 2021</strong> "The Third Battle of Panipat (1761) was a turning point in Indian history. Discuss."</div>
+    </div>
+  </div>
+
+  <!-- MODERN INDIA -->
+  <div class="era-band" style="--era-bg:#4ecb71;--era-col:#4ecb71;">
+    <div class="era-band-icon">🇮🇳</div>
+    <div class="era-band-text">
+      <h3>MODERN INDIA</h3>
+      <p>CHAPTER 9–13 | 1757 – 1947</p>
+    </div>
+    <div class="era-badge">UPSC GS-I UNIT 3 — MOST MARKS!</div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#4ecb71;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot" style="background:#4ecb71"></div>VERY HIGH PRIORITY · British</div>
+        <div class="tcard-title">Advent of Europeans & British Conquest (1498–1857)</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ 2013,2015,2017,2020</span><span class="tag tag-mains">Mains</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>Europeans in India:</strong> Portuguese (Vasco da Gama, 1498, Calicut), Dutch, British (EIC, 1600), French. Anglo-French rivalry: Carnatic Wars (1746–63) → British won. Robert Clive = key figure.</p>
+      <p><strong>Key Battles:</strong> Plassey (1757) – Clive vs Siraj-ud-Daulah (Nawab of Bengal) → British political power began. Buxar (1764) – decisive, British defeated combined forces of Mir Qasim+Siraj+Shuja-ud-Daulah. Treaty of Allahabad (1765) → Diwani rights of Bengal to EIC.</p>
+      <p><strong>British Expansion:</strong> Mysore Wars (4 wars, Hyder Ali then Tipu Sultan – "Tiger of Mysore", died Srirangapatna 1799). Anglo-Maratha Wars (3, 1775–1818). Anglo-Sikh Wars (2, 1845–49, Punjab annexed). Doctrine of Lapse (Dalhousie) – Jhansi, Satara, Nagpur annexed.</p>
+      <p><strong>Land Revenue:</strong> Permanent Settlement (1793, Bengal, Cornwallis – Zamindari). Ryotwari (Munro, Madras, Bombay – direct with ryot). Mahalwari (NW India, village community).</p>
+      <div class="pyq-pill"><strong>📜 PYQ 2020 (Mains)</strong> "Battle of Plassey, 1757, had far-reaching consequences for India. Explain." | PYQ 2017: "How did the Doctrine of Lapse accelerate the pace of British annexations?"</div>
+    </div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#4ecb71;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot" style="background:#4ecb71"></div>VERY HIGH PRIORITY · 1857</div>
+        <div class="tcard-title">Revolt of 1857 — First War of Independence</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ 2013,2014,2017,2021</span><span class="tag tag-mains">Mains</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>Causes:</strong> Greased cartridges (Enfield rifle, pig/cow fat – religious sentiment). Doctrine of Lapse. Drain of wealth. Racial discrimination. Vernacular Press Act fears. Displacement of traditional rulers. Low salaries of sepoys.</p>
+      <p><strong>Timeline:</strong> Mangal Pandey (Barrackpore, March 29, 1857 – first revolt). Meerut (May 10, 1857) – sepoys revolted. Delhi – Bahadur Shah Zafar declared leader. Spread across: Kanpur (Nana Sahib), Lucknow (Begum Hazrat Mahal), Jhansi (Lakshmi Bai – "Manikarnika"), Bareilly (Bakht Khan).</p>
+      <p><strong>Causes of Failure:</strong> Disunity, lack of national consciousness, no foreign support, no middle class participation, no leaders of Akbar's caliber. Limited to north India.</p>
+      <p><strong>Consequences:</strong> Crown Rule (Queen's Proclamation 1858). EIC ended. Viceroy replaced Governor-General. Secretary of State for India created. Indian Army reorganized (increased British soldiers ratio).</p>
+      <p><strong>Nature Debate:</strong> V.D. Savarkar – "First War of Independence". British – "Sepoy Mutiny". R.C. Majumdar – "Not national uprising". Karl Marx – "Glorious insurrection".</p>
+      <div class="pyq-pill"><strong>📜 PYQ 2021 (Mains)</strong> "The Revolt of 1857 is described variously as a 'Sepoy Mutiny', a 'National Rising' and 'India's First War of Independence'. Critically examine these characterisations."</div>
+    </div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#4ecb71;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot" style="background:#4ecb71"></div>VERY HIGH PRIORITY · Social Reform</div>
+        <div class="tcard-title">19th Century Social & Religious Reform Movements</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ 2014,2016,2018,2022</span><span class="tag tag-mains">Mains</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>Key Reformers:</strong></p>
+      <ul>
+        <li><strong>Raja Ram Mohan Roy</strong> – Brahmo Samaj (1828), fought Sati, widow remarriage, women's education. "Father of Indian Renaissance." Abolished Sati 1829 (Regulation XVII).</li>
+        <li><strong>Ishwar Chandra Vidyasagar</strong> – Widow Remarriage Act 1856, women's education, opposed child marriage.</li>
+        <li><strong>Swami Dayananda Saraswati</strong> – Arya Samaj (1875), "Back to Vedas", against idolatry, caste, opposed child marriage. Shuddhi movement.</li>
+        <li><strong>Ramakrishna Paramahamsa & Swami Vivekananda</strong> – Ramakrishna Mission (1897), Neo-Vedanta, Chicago speech (1893), "Service to man is service to God."</li>
+        <li><strong>Jyotirao Phule</strong> – Satyashodhak Samaj (1873), anti-caste, Gulamgiri (1873), promoted education for lower castes.</li>
+        <li><strong>Sir Syed Ahmad Khan</strong> – Aligarh Muslim University (1875), Aligarh Movement, Muslim modernization.</li>
+        <li><strong>Annie Besant</strong> – Theosophical Society (India), Home Rule Movement (1916).</li>
+        <li><strong>B.R. Ambedkar</strong> – Anti-caste, Mahad Satyagraha (1927), converted to Buddhism (1956).</li>
+      </ul>
+      <div class="pyq-pill"><strong>📜 PYQ 2022 (Mains)</strong> "Social reform movements of the 19th century created the social basis for the national movement. Discuss."</div>
+    </div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#4ecb71;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot" style="background:#4ecb71"></div>VERY HIGH PRIORITY · Freedom</div>
+        <div class="tcard-title">Indian National Movement (1885–1947) — Congress, Gandhi, Partition</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ EVERY YEAR</span><span class="tag tag-mains">Mains</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>Indian National Congress (INC, 1885):</strong> Founded by A.O. Hume. First President: W.C. Bonnerjee. Moderate phase (1885–1905): Petition, prayer, protest. Leaders: Gopal Krishna Gokhale ("Teacher of Gandhi"), Dadabhai Naoroji (Drain Theory, "Grand Old Man"), Pherozeshah Mehta.</p>
+      <p><strong>Extremists/Militants (1905–1920):</strong> Bal Gangadhar Tilak ("Swaraj is my birthright"), Lala Lajpat Rai, Bipin Chandra Pal (Lal-Bal-Pal). Swadeshi Movement (1905, Bengal Partition by Curzon). Home Rule (1916 – Tilak + Besant). Lucknow Pact (1916, Congress-League unity).</p>
+      <p><strong>Gandhian Era (1919–1947):</strong></p>
+      <ul>
+        <li>Champaran (1917) – indigo farmers. Kheda (1918) – revenue. Ahmedabad (1918) – mill workers.</li>
+        <li>Rowlatt Satyagraha (1919), Jallianwala Bagh Massacre (April 13, 1919 – Dyer, 379+ killed)</li>
+        <li>Non-Cooperation Movement (1920–22) – ended after Chauri Chaura (Feb 1922)</li>
+        <li>Simon Commission (1927, "Go back"), Nehru Report (1928)</li>
+        <li>Civil Disobedience Movement (1930–34) – Dandi March (Mar 12–Apr 6, 1930), Gandhi-Irwin Pact (1931)</li>
+        <li>Round Table Conferences (1930, 31, 32) – Gandhi went to 2nd only</li>
+        <li>Individual Satyagraha (1940), Cripps Mission (1942 – "post-dated cheque")</li>
+        <li>Quit India Movement (1942) – "Do or Die". Leaders arrested. Aruna Asaf Ali hoisted flag.</li>
+        <li>INA (Indian National Army) – Subhas Chandra Bose, Singapore, "Give me blood, I'll give you freedom"</li>
+        <li>Cabinet Mission (1946), Direct Action Day (Aug 16, 1946 – Jinnah)</li>
+        <li>Mountbatten Plan (June 3, 1947) → Independence & Partition (August 14-15, 1947)</li>
+      </ul>
+      <div class="pyq-pill"><strong>📜 PYQ 2023 (Mains)</strong> "Evaluate the role of Mahatma Gandhi in transforming the Indian National Movement into a mass movement." | PYQ 2022: "How did the Quit India Movement of 1942 accelerate the end of British rule in India?"</div>
+    </div>
+  </div>
+
+  <!-- WORLD HISTORY -->
+  <div class="era-band" style="--era-bg:#4a9eff;--era-col:#4a9eff;">
+    <div class="era-band-icon">🌍</div>
+    <div class="era-band-text">
+      <h3>WORLD HISTORY</h3>
+      <p>CHAPTER 14–15 | 18th–20th Century</p>
+    </div>
+    <div class="era-badge">UPSC GS-I UNIT 4</div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#4a9eff;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot" style="background:#4a9eff"></div>HIGH PRIORITY · World</div>
+        <div class="tcard-title">French Revolution (1789) & American Revolution (1776)</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ 2016,2019</span><span class="tag tag-mains">Mains</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>American Revolution (1776):</strong> Boston Tea Party (1773) → "No taxation without representation." Declaration of Independence (July 4, 1776, Thomas Jefferson). Influenced by Enlightenment (Locke, Montesquieu). First modern democratic republic. Inspired French Revolution.</p>
+      <p><strong>French Revolution (1789):</strong> Causes: Bankrupt treasury (American war), bad harvests, Estates system (1st/2nd/3rd Estate), Enlightenment ideas. Bastille stormed (July 14, 1789). Declaration of Rights of Man. Liberty, Equality, Fraternity. Reign of Terror (Robespierre). Napoleon Bonaparte rose to power. Spread nationalism & democracy across Europe.</p>
+      <p><strong>UPSC Relevance:</strong> Concept of sovereignty, human rights, nationalism, constitutionalism – all emerged from these revolutions and directly influenced Indian constitutional thought.</p>
+      <div class="pyq-pill"><strong>📜 PYQ 2019 (Mains)</strong> "The French Revolution and its aftermath influenced the course of modern history. Analyse."</div>
+    </div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#4a9eff;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot" style="background:#4a9eff"></div>HIGH PRIORITY · World Wars</div>
+        <div class="tcard-title">World War I (1914–18) & World War II (1939–45)</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ 2014,2018,2022</span><span class="tag tag-mains">Mains</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>WWI (1914–18):</strong> MAIN causes: Militarism, Alliance system (Triple Alliance vs Triple Entente), Imperialism, Nationalism. Trigger: Archduke Franz Ferdinand assassinated (June 28, 1914, Sarajevo). Major battles: Somme, Verdun, Gallipoli. USA joined 1917. Treaty of Versailles (1919) – humiliated Germany (War Guilt Clause, reparations, lost territories) → seeds of WWII.</p>
+      <p><strong>WWII (1939–45):</strong> Hitler (Nazi Germany) invaded Poland (Sept 1, 1939). Axis (Germany, Italy, Japan) vs Allies (UK, France, USSR, USA). Holocaust (6 million Jews killed). Pacific War (Japan attacked Pearl Harbor, Dec 7, 1941). D-Day (June 6, 1944). Hiroshima-Nagasaki (Aug 6 & 9, 1945). UN formed (Oct 24, 1945). Cold War began.</p>
+      <p><strong>India Impact:</strong> Both wars drained Indian resources. Rowlatt Act (1919) post-WWI. INA (Bose) during WWII. British weakened → decolonisation accelerated.</p>
+      <div class="pyq-pill"><strong>📜 PYQ 2022 (Mains)</strong> "The interwar period (1919–39) witnessed the seeds of World War II being sown. Critically examine."</div>
+    </div>
+  </div>
+
+  <div class="tcard" style="--tc-color:#4a9eff;" onclick="toggleTC(this)">
+    <div class="tcard-head">
+      <div class="tcard-main">
+        <div class="tcard-meta"><div class="imp-dot" style="background:#4a9eff"></div>HIGH PRIORITY · World</div>
+        <div class="tcard-title">Colonialism, Nationalism & Decolonisation — Asia & Africa</div>
+        <div class="tags"><span class="tag tag-pyq">PYQ 2015,2020</span><span class="tag tag-mains">Mains</span></div>
+      </div>
+      <div class="tcard-arrow">▼</div>
+    </div>
+    <div class="tcard-body">
+      <p><strong>Colonialism:</strong> European powers colonised Asia, Africa by 19th century. British Empire ("sun never sets"). Imperialism theories: Lenin ("Imperialism, highest stage of capitalism"), Hobson. Economic exploitation: raw materials, markets, cheap labour.</p>
+      <p><strong>Nationalism & Decolonisation:</strong> WWII weakened colonial powers. UN Charter promised self-determination. Indian Independence (1947) inspired others. Indonesia (1945), Israel (1948), China (1949 – Communist), Korea divided (1945), Vietnam War (1955–75), Africa – most countries independent by 1960s.</p>
+      <p><strong>Cold War:</strong> USA (Capitalism, NATO) vs USSR (Communism, Warsaw Pact). Truman Doctrine, Marshall Plan, Berlin Blockade, Korean War, Cuban Missile Crisis (1962), Vietnam War. Non-Aligned Movement (NAM, 1961) – Nehru, Nasser, Tito. Berlin Wall fell (1989). USSR dissolved (1991).</p>
+    </div>
+  </div>
+
+</div></div>
+
+<!-- ========================= TIMELINE ========================= -->
+<div id="timeline" class="sec">
+<div class="container">
+  <div class="intro-box">
+    <div style="font-size:2.5rem">⏳</div>
+    <div>
+      <h2>Chronological Timeline — 3000 BCE to 1947 CE</h2>
+      <p>Complete Indian and World History timeline. Colour-coded by era. Every major event, king, movement and year noted.</p>
+    </div>
+  </div>
+  <div class="timeline">
+
+    <div class="tl-era-break">🏺 ANCIENT INDIA (3000 BCE – 700 CE)</div>
+
+    <div class="tl-item" style="--tl-color:#e8b84b;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">c. 2500–1750 BCE</div>
+      <div class="tl-title">Indus Valley Civilisation (IVC) — Harappan Phase</div>
+      <div class="tl-desc">Major cities: Harappa (Punjab, Pakistan) & Mohenjo-daro (Sindh). Planned cities, drainage system, Great Bath, standardised weights. Undeciphered script. Trade with Mesopotamia. Bronze Age culture. Declined c.1750 BCE.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#e8b84b;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">c. 1500 BCE</div>
+      <div class="tl-title">Vedic Age Begins — Aryans in India</div>
+      <div class="tl-desc">Rigvedic period begins in Sapta Sindhu (Punjab). Rig Veda composed. Tribal, pastoral society. Sabha and Samiti assemblies. Women participated in intellectual life. Cattle economy.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#e8b84b;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">c. 1000 BCE</div>
+      <div class="tl-title">Later Vedic Period — Ganga Plains Settled</div>
+      <div class="tl-desc">Aryans move eastward. Iron used (painted grey ware culture). Upanishads written. Rigid varna system. 16 Mahajanapadas emerge. Agriculture dominant. Brahmanical orthodoxy rises.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#e8b84b;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">599 BCE</div>
+      <div class="tl-title">Birth of Vardhamana Mahavira — Founder of Modern Jainism</div>
+      <div class="tl-desc">Born at Vaishali, Bihar. 24th Tirthankara. Attained Nirvana at Pavapuri (527 BCE). Preached five vows: Ahimsa, Satya, Asteya, Brahmacharya, Aparigraha. Founded organised Jain community.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#e8b84b;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">563 BCE</div>
+      <div class="tl-title">Birth of Siddhartha Gautama — The Buddha</div>
+      <div class="tl-desc">Born at Lumbini, Nepal. Enlightenment at Bodh Gaya (528 BCE). First sermon at Sarnath (Dhammachakrapravartana). Mahaparinirvana at Kushinagar (483 BCE). Founded Buddhism — Four Noble Truths, Eightfold Path.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#e8b84b;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">327–325 BCE</div>
+      <div class="tl-title">Alexander's Invasion of India</div>
+      <div class="tl-desc">Alexander the Great invaded NW India. Defeated Porus at Battle of Hydaspes (Jhelum, 326 BCE). Soldiers refused to go further. Left via Sindh. Opened up Indo-Greek trade routes. Indirect catalyst for Maurya Empire.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#e8b84b;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">321 BCE</div>
+      <div class="tl-title">Chandragupta Maurya — Founding of Maurya Empire</div>
+      <div class="tl-desc">With Chanakya's guidance, Chandragupta overthrew Dhana Nanda (last Nanda king). Defeated Seleucus Nicator (305 BCE). Got Afghanistan+Balochistan. Greek ambassador Megasthenes wrote Indica. Empire extended from Kabul to Deccan.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#e8b84b;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">268–232 BCE</div>
+      <div class="tl-title">Ashoka the Great — Mauryan Emperor</div>
+      <div class="tl-desc">Kalinga War (261 BCE) → 100,000 killed → Ashoka converts to Buddhism. Dhamma policy: Ahimsa, tolerance, welfare. Rock Edicts and Pillar Edicts spread message. Sent missions to Sri Lanka, Central Asia, Greece. Lion capital at Sarnath = India's national emblem.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#e8b84b;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">185 BCE</div>
+      <div class="tl-title">End of Maurya Empire — Pushyamitra Shunga Coup</div>
+      <div class="tl-desc">Brihadratha, last Mauryan king, killed by commander Pushyamitra Shunga. Shunga dynasty began. Period of Brahmanical revival. Indo-Greek kingdoms (Bactrian Greeks) – Menander (Milinda), adopted Buddhism. Sangam Literature in South India.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#e8b84b;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">320–550 CE</div>
+      <div class="tl-title">Gupta Empire — Golden Age of India</div>
+      <div class="tl-desc">Chandragupta I (founder, 320 CE). Samudragupta (Napoleon of India). Chandragupta II/Vikramaditya (peak). Aryabhata (mathematics, astronomy), Kalidasa (literature), Sushruta (surgery). Fahien visits (405 CE). Nalanda University flourished.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#e8b84b;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">606–647 CE</div>
+      <div class="tl-title">Harsha's Empire — Last Great Northern Emperor</div>
+      <div class="tl-desc">Harshavardhana ruled from Kanauj. Chinese traveler Xuanzang (Hiuen Tsang) visited. Nalanda at its peak. Defeated by Chalukya king Pulakesi II in Deccan (couldn't cross Narmada). Death → political fragmentation in north.</div>
+    </div>
+
+    <div class="tl-era-break">🕌 MEDIEVAL INDIA (700 – 1750 CE)</div>
+
+    <div class="tl-item" style="--tl-color:#b47ed1;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">711 CE</div>
+      <div class="tl-title">Arab Conquest of Sindh — Muhammad bin Qasim</div>
+      <div class="tl-desc">Arab general Muhammad bin Qasim defeated Raja Dahir and conquered Sindh. First permanent Islamic foothold in India. Introduction of Arabic administrative practices. Limited to Sindh; didn't spread further.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#b47ed1;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1000–1027 CE</div>
+      <div class="tl-title">Mahmud of Ghazni — 17 Raids on India</div>
+      <div class="tl-desc">Sultan of Ghazni (Afghanistan) raided India 17 times (1000–1027). Main motive: Plunder (NOT to stay). Somnath temple ransacked (1025). Alberuni accompanied, wrote Kitab-ul-Hind. First extensive contact between India and Islamic world.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#b47ed1;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1192 CE</div>
+      <div class="tl-title">Second Battle of Tarain — Muhammad Ghori Conquers India</div>
+      <div class="tl-desc">Muhammad Ghori defeated Prithviraj Chauhan (lost First Battle 1191, won Second 1192). Foundation of permanent Muslim rule in North India. Qutb-ud-din Aibak left as viceroy → became first Delhi Sultan (1206). Start of Sultanate Period.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#b47ed1;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1206–1526 CE</div>
+      <div class="tl-title">Delhi Sultanate — Five Dynasties Rule Delhi</div>
+      <div class="tl-desc">Slave/Mamluk (1206–90), Khilji (1290–1320), Tughlaq (1320–1414), Sayyid (1414–51), Lodi (1451–1526). Major rulers: Iltutmish, Razia Sultan, Alauddin Khilji (market reforms, Mongol defeats), Muhammad bin Tughlaq (eccentric), Firuz Shah Tughlaq (welfare). Timur invaded 1398, devastated Delhi.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#b47ed1;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1336–1565 CE</div>
+      <div class="tl-title">Vijayanagara Empire — South India's Greatest Hindu Kingdom</div>
+      <div class="tl-desc">Founded by Harihara & Bukka (1336). Capital: Hampi (Virupaksha temple complex). Greatest ruler: Krishnadevaraya (1509–29) – Telugu literature golden age. Battle of Talikota (1565) → Vijayanagara defeated by Deccan Sultanates. Hampi in ruins.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#b47ed1;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1498 CE</div>
+      <div class="tl-title">Vasco da Gama Arrives in Calicut — Portuguese Open Sea Route</div>
+      <div class="tl-desc">Vasco da Gama reached Calicut (Kozhikode, Kerala) on May 27, 1498. Opened direct sea route from Europe to India around Africa's Cape of Good Hope. Portuguese established trading posts: Goa (1510, Alfonso de Albuquerque), Diu, Daman, Calicut.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#b47ed1;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1526 CE</div>
+      <div class="tl-title">First Battle of Panipat — Babur Defeats Ibrahim Lodi</div>
+      <div class="tl-desc">Babur (descendant of Timur+Genghis Khan) defeated Ibrahim Lodi using artillery and flanking tactics (Tulughma). Established Mughal Empire. Baburnama is autobiography – vivid account of India.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#b47ed1;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1556–1605 CE</div>
+      <div class="tl-title">Akbar the Great — Mughal Empire at its Peak</div>
+      <div class="tl-desc">Second Battle of Panipat (1556, Hemu defeated). Rajput matrimonial alliances. Mansabdari system. Abolished Jizya (1564). Din-i-Ilahi (1582). Fatehpur Sikri built. Navratna court. Greatest Mughal emperor. Expanded to cover most of India.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#b47ed1;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1627–1680 CE</div>
+      <div class="tl-title">Shivaji Maharaj — Founder of Maratha Empire</div>
+      <div class="tl-desc">Born Shivneri fort (Feb 19, 1630). Killed Afzal Khan (1659), escaped Agra (1666). Crowned at Raigad (1674). Ashtapradhan, Chauth system. Guerrilla warfare master. Challenged Mughal authority. Died 1680 — legacy inspired independence movement.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#b47ed1;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1658–1707 CE</div>
+      <div class="tl-title">Aurangzeb — Last Great Mughal; Empire Begins Decline</div>
+      <div class="tl-desc">Reimposed Jizya, destroyed temples, long Deccan campaigns (1682–1707). Killed Sikh Guru Tegh Bahadur (1675) → increased Sikh opposition. Died at Ahmednagar (1707). Mughal empire fragmented rapidly after his death. Maratha power rose.</div>
+    </div>
+
+    <div class="tl-era-break">🇮🇳 MODERN INDIA (1757 – 1947)</div>
+
+    <div class="tl-item" style="--tl-color:#4ecb71;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1600 CE</div>
+      <div class="tl-title">English East India Company (EIC) Founded</div>
+      <div class="tl-desc">Queen Elizabeth I granted charter (Dec 31, 1600). Initial purpose: trade spices. First factory at Surat (1608). Fort St. George (Madras, 1639). Fort William (Calcutta, 1700). Gradually became political power.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4ecb71;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1757</div>
+      <div class="tl-title">Battle of Plassey — British Political Domination Begins</div>
+      <div class="tl-desc">Robert Clive defeated Nawab Siraj-ud-Daulah of Bengal (with help of traitor Mir Jafar). Real beginning of British raj. Company gained zamindari rights. Black Hole of Calcutta (1756) preceded this.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4ecb71;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1764</div>
+      <div class="tl-title">Battle of Buxar — British Supremacy Confirmed</div>
+      <div class="tl-desc">Hector Munro defeated combined army of Mir Qasim, Nawab of Awadh, and Mughal Emperor Shah Alam II. Treaty of Allahabad (1765): Diwani rights of Bengal, Bihar, Orissa to EIC. More decisive than Plassey.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4ecb71;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1793</div>
+      <div class="tl-title">Permanent Settlement of Bengal — Cornwallis</div>
+      <div class="tl-desc">Lord Cornwallis fixed revenue demand permanently with zamindars. Created a class of loyal landowners but extracted maximum from peasants. Land became saleable commodity. Foundation of rural exploitation.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4ecb71;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1828</div>
+      <div class="tl-title">Brahmo Samaj Founded — Raja Ram Mohan Roy</div>
+      <div class="tl-desc">First modern reform movement. Monotheism, opposed sati, idolatry, child marriage. Ram Mohan Roy helped pass Sati Abolition Act (1829) under Lord Bentinck. "Father of Indian Renaissance."</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4ecb71;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1857</div>
+      <div class="tl-title">Revolt of 1857 — First War of Independence</div>
+      <div class="tl-desc">Mangal Pandey fired first shot (March 29). Sepoy revolt at Meerut (May 10). Spread to Delhi, Lucknow, Kanpur, Jhansi. Lakshmi Bai of Jhansi died fighting (June 1858). EIC rule ended. Crown Rule began (Queen's Proclamation, Nov 1, 1858).</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4ecb71;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1885</div>
+      <div class="tl-title">Indian National Congress (INC) Founded</div>
+      <div class="tl-desc">Founded by Allan Octavian Hume (retired ICS). First session: Bombay (Dec 28, 1885). First President: Womesh Chandra Bonnerjee. Early phase: Moderate, petitions. Later Extremists: Tilak, Pal, Lajpat Rai (Lal-Bal-Pal).</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4ecb71;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1905</div>
+      <div class="tl-title">Partition of Bengal & Swadeshi Movement</div>
+      <div class="tl-desc">Lord Curzon partitioned Bengal (Oct 16, 1905) – political motive (divide Hindus & Muslims). Massive protest → Swadeshi Movement: boycott British goods, promote Indian industry. Tilak's Lal-Bal-Pal led. Reunification 1911. First mass movement in India.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4ecb71;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1915</div>
+      <div class="tl-title">Gandhi Returns to India — Era of Mass Struggle</div>
+      <div class="tl-desc">Mohandas Gandhi returned from South Africa after leading Satyagraha there. Gokhale was his political guru. Tested Satyagraha in Champaran (1917), Kheda (1918), Ahmedabad mill strike (1918). Transformed freedom movement from elite to mass.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4ecb71;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1919</div>
+      <div class="tl-title">Jallianwala Bagh Massacre — April 13, 1919</div>
+      <div class="tl-desc">General Dyer ordered firing on unarmed crowd at Jallianwala Bagh, Amritsar (Baisakhi gathering). 379+ killed (official), 1000+ (Congress estimate). Rabindranath Tagore returned his knighthood in protest. Turned Indian public against British permanently.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4ecb71;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1920</div>
+      <div class="tl-title">Non-Cooperation Movement — Gandhi's First Mass Campaign</div>
+      <div class="tl-desc">Gandhi called for boycott of British institutions, goods, courts, schools. Titles returned. Khilafat issue linked. First truly national movement. Ended abruptly after Chauri Chaura violence (Feb 4, 1922) → 23 policemen killed by mob. Gandhi suspended movement.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4ecb71;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1930</div>
+      <div class="tl-title">Dandi March (Salt March) — Civil Disobedience Begins</div>
+      <div class="tl-desc">Gandhi marched 241 miles from Sabarmati to Dandi (March 12 – April 6, 1930). Made salt illegally → challenged British salt monopoly. Triggered Civil Disobedience Movement across India. International attention. Gandhi arrested.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4ecb71;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1942</div>
+      <div class="tl-title">Quit India Movement — "Do or Die"</div>
+      <div class="tl-desc">August 8, 1942 – Bombay. Gandhi's call: "Do or Die." All major leaders arrested. Underground movement: Aruna Asaf Ali hoisted Congress flag. Jay Prakash Narayan led underground. Satara, Midnapore, Ballia → parallel governments formed. British: most violent repression. India independence timeline moved up.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4ecb71;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1943–45</div>
+      <div class="tl-title">Indian National Army (INA) — Subhas Chandra Bose</div>
+      <div class="tl-desc">Netaji Subhas Chandra Bose organised INA in Singapore (from POWs). "Azad Hind Fauj." Marched toward India via Imphal-Kohima (1944) – failed. "Give me blood, I'll give you freedom." Died (Aug 18, 1945, air crash, Taipei – disputed). INA trials at Red Fort galvanised Indian opinion.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4ecb71;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">Aug 14–15, 1947</div>
+      <div class="tl-title">INDEPENDENCE & PARTITION — India & Pakistan Born</div>
+      <div class="tl-desc">Mountbatten Plan (June 3, 1947) → partition accepted. Pakistan (Aug 14), India (Aug 15). Radcliffe Line divided Punjab and Bengal. 10–20 million displaced, 200,000–2 million killed in communal violence. Jawaharlal Nehru's "Tryst with Destiny" speech. Largest peaceful transfer of power in history.</div>
+    </div>
+
+    <div class="tl-era-break">🌍 WORLD HISTORY HIGHLIGHTS</div>
+
+    <div class="tl-item" style="--tl-color:#4a9eff;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1776</div>
+      <div class="tl-title">American Declaration of Independence</div>
+      <div class="tl-desc">July 4, 1776. 13 colonies declared independence from Britain. Thomas Jefferson authored declaration. "All men are created equal." First democratic republic. Inspired French Revolution.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4a9eff;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1789</div>
+      <div class="tl-title">French Revolution — Liberty, Equality, Fraternity</div>
+      <div class="tl-desc">Bastille stormed (July 14). King Louis XVI guillotined. Reign of Terror. Declaration of Rights of Man. Napoleon Bonaparte rose. Spread nationalism across Europe. Modern democratic concepts born.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4a9eff;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1914–1918</div>
+      <div class="tl-title">World War I — "The Great War"</div>
+      <div class="tl-desc">Franz Ferdinand assassinated (June 28, 1914). Triple Alliance vs Triple Entente. Trench warfare. 17 million dead. Treaty of Versailles (1919) humiliated Germany. League of Nations formed. Ottoman Empire dissolved.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4a9eff;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1917</div>
+      <div class="tl-title">Russian Revolution — Lenin & Bolsheviks</div>
+      <div class="tl-desc">February Revolution (Tsar Nicholas II abdicated). October Revolution (Bolsheviks seized power). Lenin's slogan: "Peace, Land, Bread." Soviet Union formed (1922). World's first communist state. Inspired global leftist movements.</div>
+    </div>
+
+    <div class="tl-item" style="--tl-color:#4a9eff;">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1939–1945</div>
+      <div class="tl-title">World War II — Deadliest Conflict in Human History</div>
+      <div class="tl-desc">Hitler invaded Poland (Sept 1, 1939). Holocaust – 6 million Jews. Pearl Harbour (Dec 7, 1941). D-Day (June 6, 1944). Hiroshima (Aug 6), Nagasaki (Aug 9, 1945). 70–85 million dead. UN formed (Oct 24, 1945). Cold War began.</div>
+    </div>
+
+  </div>
+</div></div>
+
+<!-- ========================= PYQ ANALYSIS ========================= -->
+<div id="pyq" class="sec">
+<div class="container">
+  <div class="intro-box">
+    <div style="font-size:2.5rem">📊</div>
+    <div>
+      <h2>30-Year PYQ Analysis (1995–2024)</h2>
+      <p>Pattern analysis of UPSC Mains GS-I History questions. Know what to prioritise. Most-asked topics identified with frequency.</p>
+    </div>
+  </div>
+
+  <div class="analysis-grid">
+    <div class="ag-stat" style="--asc:#4ecb71;">
+      <div class="ag-stat-num">38%</div>
+      <div class="ag-stat-lbl">Modern India Share of Questions</div>
+      <div class="ag-stat-desc">Freedom Struggle, 1857, Social Reform, British Policies. Most marks come from Modern History. Never skip.</div>
+    </div>
+    <div class="ag-stat" style="--asc:#e8b84b;">
+      <div class="ag-stat-num">28%</div>
+      <div class="ag-stat-lbl">Medieval India Share</div>
+      <div class="ag-stat-desc">Mughal Empire, Bhakti-Sufi, Delhi Sultanate, Vijayanagara. Architecture questions in Art & Culture section.</div>
+    </div>
+    <div class="ag-stat" style="--asc:#4a9eff;">
+      <div class="ag-stat-num">22%</div>
+      <div class="ag-stat-lbl">World History Share</div>
+      <div class="ag-stat-desc">French/American revolutions, WWI/WWII, Colonialism, Cold War. Increasingly important since 2015.</div>
+    </div>
+    <div class="ag-stat" style="--asc:#9b59b6;">
+      <div class="ag-stat-num">12%</div>
+      <div class="ag-stat-lbl">Ancient India Share</div>
+      <div class="ag-stat-desc">IVC, Buddhism, Mauryas, Guptas. Often appears in Art & Culture GS-I rather than pure History slot.</div>
+    </div>
+  </div>
+
+  <div class="ag-card">
+    <div class="ag-head"><h3>🔥 Most Repeated Topics — UPSC Mains History (1995–2024)</h3></div>
+    <div class="ag-body">
+      <table style="width:100%;border-collapse:collapse;font-family:Raleway,sans-serif;font-size:.83rem;">
+        <tr style="background:rgba(232,184,75,.15);color:var(--gold2);">
+          <th style="padding:.7rem;text-align:left;border-bottom:1px solid var(--border)">Topic</th>
+          <th style="padding:.7rem;text-align:center;border-bottom:1px solid var(--border)">Frequency</th>
+          <th style="padding:.7rem;text-align:center;border-bottom:1px solid var(--border)">Last Asked</th>
+          <th style="padding:.7rem;text-align:center;border-bottom:1px solid var(--border)">Priority</th>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+          <td style="padding:.65rem .7rem;color:rgba(255,255,255,.9);">Revolt of 1857</td>
+          <td style="text-align:center;color:var(--gold)">8 times</td>
+          <td style="text-align:center;color:var(--muted)">2021</td>
+          <td style="text-align:center;">🔴 MUST</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02)">
+          <td style="padding:.65rem .7rem;color:rgba(255,255,255,.9);">Gandhian Movements (NCM, CDM, QIM)</td>
+          <td style="text-align:center;color:var(--gold)">12+ times</td>
+          <td style="text-align:center;color:var(--muted)">2023</td>
+          <td style="text-align:center;">🔴 MUST</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+          <td style="padding:.65rem .7rem;color:rgba(255,255,255,.9);">Social Reform Movements (19th Century)</td>
+          <td style="text-align:center;color:var(--gold)">7 times</td>
+          <td style="text-align:center;color:var(--muted)">2022</td>
+          <td style="text-align:center;">🔴 MUST</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02)">
+          <td style="padding:.65rem .7rem;color:rgba(255,255,255,.9);">Mughal Administration & Decline</td>
+          <td style="text-align:center;color:var(--gold)">9 times</td>
+          <td style="text-align:center;color:var(--muted)">2022</td>
+          <td style="text-align:center;">🔴 MUST</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+          <td style="padding:.65rem .7rem;color:rgba(255,255,255,.9);">Bhakti-Sufi Movement</td>
+          <td style="text-align:center;color:var(--gold)">6 times</td>
+          <td style="text-align:center;color:var(--muted)">2023</td>
+          <td style="text-align:center;">🟠 High</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02)">
+          <td style="padding:.65rem .7rem;color:rgba(255,255,255,.9);">IVC / Indus Valley Civilisation</td>
+          <td style="text-align:center;color:var(--gold)">5 times</td>
+          <td style="text-align:center;color:var(--muted)">2021</td>
+          <td style="text-align:center;">🟠 High</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+          <td style="padding:.65rem .7rem;color:rgba(255,255,255,.9);">World Wars (I & II)</td>
+          <td style="text-align:center;color:var(--gold)">5 times</td>
+          <td style="text-align:center;color:var(--muted)">2022</td>
+          <td style="text-align:center;">🟠 High</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02)">
+          <td style="padding:.65rem .7rem;color:rgba(255,255,255,.9);">Mauryan Empire & Ashoka</td>
+          <td style="text-align:center;color:var(--gold)">6 times</td>
+          <td style="text-align:center;color:var(--muted)">2019</td>
+          <td style="text-align:center;">🟠 High</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+          <td style="padding:.65rem .7rem;color:rgba(255,255,255,.9);">French/American Revolutions</td>
+          <td style="text-align:center;color:var(--gold)">4 times</td>
+          <td style="text-align:center;color:var(--muted)">2019</td>
+          <td style="text-align:center;">🟡 Medium</td>
+        </tr>
+        <tr style="background:rgba(255,255,255,.02)">
+          <td style="padding:.65rem .7rem;color:rgba(255,255,255,.9);">Delhi Sultanate (Alauddin Khilji)</td>
+          <td style="text-align:center;color:var(--gold)">5 times</td>
+          <td style="text-align:center;color:var(--muted)">2021</td>
+          <td style="text-align:center;">🟡 Medium</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="ag-card" style="margin-top:1.5rem;">
+    <div class="ag-head"><h3>📝 How Questions Are Asked — Patterns & Keywords</h3></div>
+    <div class="ag-body">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;">
+        <div class="highlight-box"><strong style="color:var(--teal);display:block;margin-bottom:.3rem">📌 "Critically Examine"</strong>Both sides. Pros + Cons. Your balanced conclusion. E.g., "Critically examine the nature of the Revolt of 1857."</div>
+        <div class="highlight-box"><strong style="color:var(--blue);display:block;margin-bottom:.3rem">📌 "Analyse / Assess"</strong>Deep evaluation. Causes + Effects + Significance. E.g., "Analyse the impact of British economic policies on Indian agriculture."</div>
+        <div class="highlight-box"><strong style="color:var(--purple);display:block;margin-bottom:.3rem">📌 "Discuss"</strong>All aspects. Broad coverage. E.g., "Discuss the main features of Ashoka's Dhamma."</div>
+        <div class="highlight-box"><strong style="color:var(--orange);display:block;margin-bottom:.3rem">📌 "Justify / Comment"</strong>Agree or disagree with a statement. Give reasons. E.g., "Justify: Akbar was the greatest Mughal emperor."</div>
+        <div class="highlight-box"><strong style="color:var(--red);display:block;margin-bottom:.3rem">📌 "Trace / Explain"</strong>Chronological or cause-effect. E.g., "Trace the rise of Gandhi to national leadership."</div>
+        <div class="highlight-box"><strong style="color:var(--green);display:block;margin-bottom:.3rem">📌 "Evaluate"</strong>Measure significance against criteria. E.g., "Evaluate the contribution of Bhakti-Sufi movement to cultural synthesis."</div>
+      </div>
+    </div>
+  </div>
+
+</div></div>
+
+<!-- ========================= Q&A WRITING ========================= -->
+<div id="qa" class="sec">
+<div class="container">
+  <div class="intro-box">
+    <div style="font-size:2.5rem">✍️</div>
+    <div>
+      <h2>Model Q&A — Structured Answers for Mains 2027</h2>
+      <p>Full model answers with examiner-approved framework. Every answer shows Intro → Body → Conclusion structure. Click to expand.</p>
+    </div>
+  </div>
+
+  <div class="qa-card" onclick="toggleQA(this)">
+    <div class="qa-q">
+      <div class="qa-num">Q1 | Mains 2021 | 150 Words</div>
+      <div class="qa-qtext">"The Revolt of 1857 is described variously as a 'Sepoy Mutiny', a 'National Rising' and 'First War of Independence'. Critically examine these characterisations."</div>
+      <div class="qa-arr">▼</div>
+    </div>
+    <div class="qa-body">
+      <div class="model-ans">
+        <h4>✅ Model Answer Framework</h4>
+        <p><strong>Introduction (2-3 lines):</strong> The 1857 uprising remains one of the most debated events in Indian historiography. While some view it as a narrow military mutiny, others see it as a precursor to national consciousness — the debate reflects evolving interpretations of colonial history.</p>
+        <p><strong>View 1 — "Sepoy Mutiny" (British View):</strong> British historians (John Lawrence, John Seeley) called it a mere mutiny of mercenary soldiers. Evidence: limited to Bengal Army; no unified leadership; no national ideology; middle class, merchants, intelligentsia largely absent; no women's organisations initially.</p>
+        <p><strong>View 2 — "National Rising" (Nationalist View):</strong> Beyond sepoys, it involved zamindars (Nana Sahib), taluqdars, tribal chiefs (Kunwar Singh), women leaders (Lakshmi Bai, Begum Hazrat Mahal), artisans. R.C. Majumdar: "not a national uprising in the modern sense but more than a mutiny."</p>
+        <p><strong>View 3 — "First War of Independence" (V.D. Savarkar):</strong> Savarkar's 1909 work "1857 — The Indian War of Independence" argued it was a planned, coordinated national struggle. Karl Marx agreed: "general disaffection against British rule."</p>
+        <p><strong>Critical Assessment:</strong> Not truly national (south, east largely unaffected; Sikhs helped British). Not just a mutiny (civilian and princely participation). Perhaps a "proto-nationalist" uprising — a transition moment towards national consciousness, even if not fully national.</p>
+        <p><strong>Conclusion:</strong> 1857 was neither purely a mutiny nor a fully national war, but a complex rebellion where diverse grievances converged — making it a watershed that accelerated British administrative restructuring and eventually, India's path to independence.</p>
+      </div>
+      <div class="score-badge"><strong>🏆 Full Marks Strategy</strong> Quote historians by name (Savarkar, Majumdar, Marx). Use "on one hand … on the other". Give specific examples per view. Balanced conclusion. 3 perspectives = comprehensive = high marks.</div>
+    </div>
+  </div>
+
+  <div class="qa-card" onclick="toggleQA(this)">
+    <div class="qa-q">
+      <div class="qa-num">Q2 | Mains 2023 | 150 Words</div>
+      <div class="qa-qtext">"Evaluate the role of Mahatma Gandhi in transforming the Indian National Movement into a mass movement."</div>
+      <div class="qa-arr">▼</div>
+    </div>
+    <div class="qa-body">
+      <div class="model-ans">
+        <h4>✅ Model Answer</h4>
+        <p><strong>Introduction:</strong> Before Gandhi's arrival (1915), India's national movement was largely confined to the urban educated elite. Gandhi's genius lay in bringing the masses — peasants, workers, women, untouchables — into active political participation for the first time.</p>
+        <p><strong>How Gandhi Transformed the Movement:</strong></p>
+        <p>• <em>New Weapons — Satyagraha:</em> Non-violent civil disobedience. Morally superior. Could be adopted by all regardless of education or wealth. Tested in Champaran (1917), Kheda (1918), Ahmedabad (1918) before going national.</p>
+        <p>• <em>Connecting Issues:</em> Linked national politics with everyday peasant grievances (salt, land revenue, indigo). Made freedom struggle tangible for the masses.</p>
+        <p>• <em>Vernacular Communication:</em> Spoke in simple Hindi. Wore dhoti. Travelled by third class. Made leaders accessible.</p>
+        <p>• <em>Inclusion:</em> Encouraged women (Sarojini Naidu, Kasturba Gandhi), Dalits (Harijan campaign), tribal communities.</p>
+        <p>• <em>Three Major Campaigns:</em> NCM (1920–22), CDM (1930–34), QIM (1942) — each successively deeper national participation.</p>
+        <p><strong>Limitations:</strong> Often suspended movements (Chauri Chaura 1922) at crucial junctures. Ambedkar criticised handling of caste issue. Regional elites sometimes coopted movement.</p>
+        <p><strong>Conclusion:</strong> Gandhi converted independence from an elite aspiration into a national consciousness. His methods — Satyagraha, fasting, jail-going — created a moral framework that ultimately made British rule untenable.</p>
+      </div>
+      <div class="score-badge"><strong>🏆 Tips</strong> Start with the "before Gandhi" context (contrast). Give specific movement names + years. Include limitations (shows critical thinking). Quote someone who disagreed (Ambedkar) for balance.</div>
+    </div>
+  </div>
+
+  <div class="qa-card" onclick="toggleQA(this)">
+    <div class="qa-q">
+      <div class="qa-num">Q3 | Mains 2022 | 150 Words</div>
+      <div class="qa-qtext">"The Mughal Empire declined due to both internal weaknesses and external pressures. Analyse."</div>
+      <div class="qa-arr">▼</div>
+    </div>
+    <div class="qa-body">
+      <div class="model-ans">
+        <h4>✅ Model Answer</h4>
+        <p><strong>Introduction:</strong> The Mughal Empire, at its height under Akbar and Aurangzeb, extended over nearly 90% of the Indian subcontinent. Yet within half a century of Aurangzeb's death (1707), it became a hollow shell — a testament to both structural fragilities and external shocks.</p>
+        <p><strong>Internal Weaknesses:</strong></p>
+        <p>• <em>Aurangzeb's Policies:</em> Reimposed Jizya (1679), temple destruction, alienated Rajputs, Marathas, Sikhs, and Deccanis. Created multiple fronts of resistance.</p>
+        <p>• <em>War of Succession:</em> No fixed succession law. Every emperor's death triggered civil war (Aurangzeb killed Dara Shikoh). Drained resources, encouraged nobles to take sides.</p>
+        <p>• <em>Mansabdari Crisis:</em> Too many mansabdars, jagirs insufficient. Mansabdars resorted to corruption, local power-seeking.</p>
+        <p>• <em>Economic Decline:</em> Prolonged Deccan campaigns (1682–1707) drained treasury. Revenue collection weakened. Trade disrupted.</p>
+        <p>• <em>Weak Successors:</em> Post-Aurangzeb emperors (Bahadur Shah I to Bahadur Shah Zafar) were increasingly puppets. 10 emperors in 12 years (1707–1719).</p>
+        <p><strong>External Pressures:</strong></p>
+        <p>• <em>Maratha Resurgence:</em> After Aurangzeb, Marathas under Peshwas captured large territories. Maratha raids reached Delhi.</p>
+        <p>• <em>Nadir Shah's Invasion (1739):</em> Ransacked Delhi, took Peacock Throne + Kohinoor diamond. Exposed Mughal military weakness to all.</p>
+        <p>• <em>Ahmad Shah Abdali:</em> Multiple invasions. Battle of Panipat III (1761) destroyed Maratha army — but Mughal empire too weak to benefit.</p>
+        <p>• <em>British Rise:</em> Plassey (1757), Buxar (1764) → British became power in Bengal while Mughals watched helplessly.</p>
+        <p><strong>Conclusion:</strong> The decline was multidimensional — Aurangzeb's religious intolerance sowed seeds, weak successors watered them, and foreign invaders + Maratha rise reaped the harvest. The empire lingered until 1857 but was effectively dead by 1720s.</p>
+      </div>
+      <div class="score-badge"><strong>🏆 Tips</strong> Use two clear sub-headings: Internal + External. Give specific dates and events. Conclude with a punchy metaphor or summary sentence. Quote historians if known.</div>
+    </div>
+  </div>
+
+  <div class="qa-card" onclick="toggleQA(this)">
+    <div class="qa-q">
+      <div class="qa-num">Q4 | Mains 2023 | 150 Words</div>
+      <div class="qa-qtext">"Bhakti movement not only brought religious reform but also contributed to social and cultural transformation. Elaborate."</div>
+      <div class="qa-arr">▼</div>
+    </div>
+    <div class="qa-body">
+      <div class="model-ans">
+        <h4>✅ Model Answer</h4>
+        <p><strong>Introduction:</strong> The Bhakti movement (7th–17th CE) was not merely a religious phenomenon — it was India's first truly democratic, egalitarian social revolution, that challenged entrenched hierarchies through devotion, poetry, and inclusive practice.</p>
+        <p><strong>Religious Transformation:</strong> Challenged Brahmanical ritualism, Sanskrit monopoly, caste-based temple exclusion. Promoted direct personal relationship with God. Monotheism (Kabir, Namdev). Synthesis of Hindu-Muslim thought (Kabir, Dadu).</p>
+        <p><strong>Social Transformation:</strong></p>
+        <p>• <em>Anti-Caste:</em> Ramananda accepted disciples of all castes (Kabir = weaver, Ravidas = cobbler, Sena = barber). Mirabai defied royal conventions and caste.</p>
+        <p>• <em>Women's Empowerment:</em> Mirabai, Andal, Akka Mahadevi, Lalla (Kashmir) — women saints who defied patriarchal norms through devotion.</p>
+        <p>• <em>Vernacular Literature:</em> Growth of Hindi (Kabir, Mirabai, Tulsidas — Ramcharitmanas), Marathi (Tukaram, Eknath), Punjabi (Guru Nanak), Bengali (Chaitanya movement). Made knowledge accessible to masses.</p>
+        <p><strong>Cultural Transformation:</strong> Music (Tansen, qawwali). Classical Indian music. Hindu-Muslim composite culture (Ganga-Jamuni Tehzeeb). Architecture influenced. Sufi dargahs became multicultural spaces.</p>
+        <p><strong>Conclusion:</strong> The Bhakti movement sowed seeds of social equality, literary renaissance, and Hindu-Muslim cultural synthesis that shaped India's plural civilisational ethos — a legacy that echoes in modern Indian secular democracy.</p>
+      </div>
+      <div class="score-badge"><strong>🏆 Tips</strong> Structure: Religious → Social → Cultural (3 dimensions). Name specific saints + their contributions. End with contemporary relevance (secular democracy). This shows sophisticated thinking.</div>
+    </div>
+  </div>
+
+</div></div>
+
+<!-- ========================= ANSWER GUIDE ========================= -->
+<div id="ansguide" class="sec">
+<div class="container">
+  <div class="intro-box">
+    <div style="font-size:2.5rem">🏆</div>
+    <div>
+      <h2>How to Score Full Marks in History — Examiner's Secret</h2>
+      <p>Tested strategies from UPSC toppers and former examiner insights. Follow this framework for every history answer.</p>
+    </div>
+  </div>
+
+  <div class="ag-card">
+    <div class="ag-head"><h3>📐 The Perfect History Answer — Step-by-Step Framework</h3></div>
+    <div class="ag-body">
+      <div class="step-list">
+        <div class="step-item"><div class="step-text"><strong>Hook Introduction (10% of word limit)</strong>Open with: a quote, a paradox, a striking fact, or a counter-intuitive observation. NEVER start "Since ancient times..." or "India is a great country...". Example opening: "When Mahatma Gandhi was asked about Western civilisation, he reportedly replied 'It would be a good idea' — this spirit of questioning power animated the entire freedom struggle."</div></div>
+        <div class="step-item"><div class="step-text"><strong>Define & Contextualise</strong>Briefly define terms, set the historical period, explain WHY this topic matters. Examiner knows the answer — show them you understand the question's depth.</div></div>
+        <div class="step-item"><div class="step-text"><strong>Multi-dimensional Body (70–75%)</strong>For "Critically Examine": For + Against + Your balanced view. For "Analyse": Causes → Developments → Effects → Significance. For "Discuss": Cover all major aspects systematically. Use sub-headings (Economic, Social, Political, Cultural) to organise.</div></div>
+        <div class="step-item"><div class="step-text"><strong>Evidence — Names, Dates, Quotes</strong>Every paragraph needs at least 1 concrete reference: a historian's name, a year, a treaty, an event. "According to Bipan Chandra...", "The Viceroy's Proclamation of 1858...", "As S.R. Sharma argues...". This separates a 10/15 answer from 7/15.</div></div>
+        <div class="step-item"><div class="step-text"><strong>Critical Balance — Avoid One-Sided Answers</strong>Even for questions where you agree with a statement, present the opposing view briefly. "However, critics argue that..." or "This view is contested by..." shows maturity and depth — examiners reward nuance.</div></div>
+        <div class="step-item"><div class="step-text"><strong>Contemporary Relevance in Conclusion</strong>End by connecting historical event to present-day significance. "The Bhakti movement's legacy can be seen in India's constitutional commitment to secularism." or "The lessons of 1857 shaped the very structure of the Indian Army post-independence." This shows that history is alive, not just academic.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ag-card">
+    <div class="ag-head"><h3>⚠️ Examiner's Pet Peeves — What LOSES You Marks</h3></div>
+    <div class="ag-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div style="background:rgba(232,80,80,.08);border:1px solid rgba(232,80,80,.2);border-radius:10px;padding:1rem;font-size:.83rem;">
+          <strong style="color:var(--red);display:block;margin-bottom:.5rem">❌ NEVER DO THIS</strong>
+          <ul style="padding-left:1rem;color:rgba(255,255,255,.75);">
+            <li style="margin-bottom:.4rem">Generic opening lines</li>
+            <li style="margin-bottom:.4rem">List without explanation</li>
+            <li style="margin-bottom:.4rem">One-sided answer (no criticism)</li>
+            <li style="margin-bottom:.4rem">No dates or specific events</li>
+            <li style="margin-bottom:.4rem">Wikipedia-style narration</li>
+            <li style="margin-bottom:.4rem">Going beyond word limit significantly</li>
+            <li style="margin-bottom:.4rem">No conclusion or weak conclusion</li>
+            <li style="margin-bottom:.4rem">Copying textbook verbatim</li>
+          </ul>
+        </div>
+        <div style="background:rgba(78,203,113,.07);border:1px solid rgba(78,203,113,.2);border-radius:10px;padding:1rem;font-size:.83rem;">
+          <strong style="color:var(--green);display:block;margin-bottom:.5rem">✅ ALWAYS DO THIS</strong>
+          <ul style="padding-left:1rem;color:rgba(255,255,255,.75);">
+            <li style="margin-bottom:.4rem">Striking, relevant introduction</li>
+            <li style="margin-bottom:.4rem">Structured sub-headings in body</li>
+            <li style="margin-bottom:.4rem">Balanced — both sides of argument</li>
+            <li style="margin-bottom:.4rem">Historian names + years + events</li>
+            <li style="margin-bottom:.4rem">Connect to present-day relevance</li>
+            <li style="margin-bottom:.4rem">Strict word limit (150 or 250)</li>
+            <li style="margin-bottom:.4rem">Forward-looking conclusion</li>
+            <li style="margin-bottom:.4rem">Your own analytical language</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ag-card">
+    <div class="ag-head"><h3>📚 Important Historians to Quote in Answers</h3></div>
+    <div class="ag-body">
+      <div class="notes-grid">
+        <div class="note-card" style="--nc-color:var(--teal)">
+          <h3>Modern History</h3>
+          <ul>
+            <li><strong>Bipan Chandra</strong> — Nationalism, Economic nationalism</li>
+            <li><strong>R.C. Majumdar</strong> — Conservative, challenges nationalist myths</li>
+            <li><strong>Sumit Sarkar</strong> — Modern India, Subaltern perspectives</li>
+            <li><strong>Dadabhai Naoroji</strong> — Drain of Wealth theory</li>
+          </ul>
+        </div>
+        <div class="note-card" style="--nc-color:var(--purple)">
+          <h3>Medieval History</h3>
+          <ul>
+            <li><strong>Irfan Habib</strong> — Mughal agrarian system</li>
+            <li><strong>Satish Chandra</strong> — Medieval Indian History (textbook)</li>
+            <li><strong>Vincent A. Smith</strong> — Called Samudragupta "Napoleon of India"</li>
+            <li><strong>Peter Hardy</strong> — Muslim identity in South Asia</li>
+          </ul>
+        </div>
+        <div class="note-card" style="--nc-color:var(--gold)">
+          <h3>Ancient History</h3>
+          <ul>
+            <li><strong>Romila Thapar</strong> — Ancient Indian History (standard reference)</li>
+            <li><strong>D.D. Kosambi</strong> — Marxist historical analysis</li>
+            <li><strong>R.S. Sharma</strong> — Ancient and early medieval India</li>
+            <li><strong>A.L. Basham</strong> — "The Wonder that was India"</li>
+          </ul>
+        </div>
+        <div class="note-card" style="--nc-color:var(--blue)">
+          <h3>World History</h3>
+          <ul>
+            <li><strong>Eric Hobsbawm</strong> — Age of Revolution, Nationalism</li>
+            <li><strong>V.I. Lenin</strong> — Imperialism as highest stage of capitalism</li>
+            <li><strong>E.H. Carr</strong> — "What is History?" — historiography</li>
+            <li><strong>H.G. Wells</strong> — Called Ashoka "India's greatest king"</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div></div>
+
+<!-- ========================= FLASHCARDS ========================= -->
+<div id="flashcards" class="sec">
+<div class="container">
+  <div class="intro-box">
+    <div style="font-size:2.5rem">🃏</div>
+    <div>
+      <h2>100 History Flashcards — Click to Flip!</h2>
+      <p>Filter by era. Use ← → arrow keys or buttons to navigate. Spacebar to flip. Perfect for daily revision.</p>
+    </div>
+  </div>
+
+  <div class="fc-toolbar">
+    <button class="fc-filter on" onclick="filterFC('All',this)">All (100)</button>
+    <button class="fc-filter" onclick="filterFC('Ancient',this)">🏺 Ancient</button>
+    <button class="fc-filter" onclick="filterFC('Medieval',this)">🕌 Medieval</button>
+    <button class="fc-filter" onclick="filterFC('Modern',this)">🇮🇳 Modern</button>
+    <button class="fc-filter" onclick="filterFC('World',this)">🌍 World</button>
+    <button class="fc-filter" onclick="filterFC('Prelims',this)">📝 Prelims Facts</button>
+    <span class="fc-counter-label" id="fcLabel">Card 1 of 100</span>
+  </div>
+
+  <div class="fc-prog"><div class="fc-prog-fill" id="fcBar" style="width:1%"></div></div>
+
+  <div class="fc-stage">
+    <div class="fc-wrap" id="fcCard" onclick="flipFC()">
+      <div class="fc-inner" id="fcInner">
+        <div class="fc-f">
+          <span class="fc-cat" id="fcCat">Category</span>
+          <div class="fc-lbl">Question</div>
+          <div class="fc-q" id="fcQ">Loading...</div>
+        </div>
+        <div class="fc-b">
+          <div class="fc-lbl">Answer</div>
+          <div class="fc-a" id="fcA">Loading...</div>
+        </div>
+      </div>
+    </div>
+    <div class="fc-controls">
+      <button class="btn" onclick="prevFC()">← Prev</button>
+      <button class="btn btn-gold" onclick="flipFC()">🔄 Flip</button>
+      <button class="btn" onclick="nextFC()">Next →</button>
+    </div>
+  </div>
+</div></div>
+
+<!-- MOTIVATION SECTION -->
+<div class="motive-section">
+  <div class="motive-div"></div>
+  <blockquote class="motive-quote">
+    "History is not the burden of the past but the <em>seed of the future</em>. Every chapter you master brings you one step closer to writing your own chapter — as an <em>IAS officer serving this ancient land</em>."
+  </blockquote>
+  <div class="motive-div"></div>
+  <cite class="motive-cite">— Scrutiny Academy | Focused Learning. Real Results. | UPSC 2027</cite>
+  <div style="margin-top:3rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;max-width:900px;margin-left:auto;margin-right:auto;">
+    <div style="background:rgba(255,255,255,.05);border:1px solid rgba(232,184,75,.2);border-radius:12px;padding:1.3rem;text-align:left;">
+      <div style="font-size:1.5rem;margin-bottom:.4rem">📅</div>
+      <div style="font-family:Raleway,sans-serif;color:var(--gold2);font-size:.78rem;margin-bottom:.4rem;font-weight:700">STUDY PLAN 2025-27</div>
+      <div style="font-size:.8rem;color:rgba(255,255,255,.7);">2025: NCERT 6-12 + Old NCERTs (Bipin Chandra). 2026: Standard Books + PYQs + Answer Writing. Jan-May 2027: Intensive Revision + Mocks.</div>
+    </div>
+    <div style="background:rgba(255,255,255,.05);border:1px solid rgba(232,184,75,.2);border-radius:12px;padding:1.3rem;text-align:left;">
+      <div style="font-size:1.5rem;margin-bottom:.4rem">📚</div>
+      <div style="font-family:Raleway,sans-serif;color:var(--gold2);font-size:.78rem;margin-bottom:.4rem;font-weight:700">HISTORY BOOKS</div>
+      <div style="font-size:.8rem;color:rgba(255,255,255,.7);">NCERT 6-12 (Old+New). Bipin Chandra (Modern). Satish Chandra (Medieval). R.S. Sharma (Ancient). Norman Lowe (World). IGNOU materials.</div>
+    </div>
+    <div style="background:rgba(255,255,255,.05);border:1px solid rgba(232,184,75,.2);border-radius:12px;padding:1.3rem;text-align:left;">
+      <div style="font-size:1.5rem;margin-bottom:.4rem">💡</div>
+      <div style="font-family:Raleway,sans-serif;color:var(--gold2);font-size:.78rem;margin-bottom:.4rem;font-weight:700">TOPPER SECRET</div>
+      <div style="font-size:.8rem;color:rgba(255,255,255,.7);">"Read NCERT 3x. Make handwritten notes. Write 5 answers/day. Discuss with peers. Revise PYQs month before exam. Sleep 7hrs."</div>
+    </div>
+    <div style="background:rgba(255,255,255,.05);border:1px solid rgba(232,184,75,.2);border-radius:12px;padding:1.3rem;text-align:left;">
+      <div style="font-size:1.5rem;margin-bottom:.4rem">🎯</div>
+      <div style="font-family:Raleway,sans-serif;color:var(--gold2);font-size:.78rem;margin-bottom:.4rem;font-weight:700">DAILY TARGET</div>
+      <div style="font-size:.8rem;color:rgba(255,255,255,.7);">10 Flashcards daily. 2 Answer writings. 30 PYQs (Prelims) per week. 1 Chapter notes/week. Review previous week's answers.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div style="display:flex;align-items:center;justify-content:center;gap:1rem;margin-bottom:.8rem;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#1e2d6a,#0d1b3e);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;">
+      <span style="font-family:Raleway,sans-serif;font-size:.8rem;color:var(--gold);font-weight:900;">SA</span>
+    </div>
+    <div><strong>Scrutiny Academy</strong> — Focused Learning. Real Results.</div>
+  </div>
+  <p>History | GS Paper-I | Complete UPSC 2027 Resource | Ancient → Medieval → Modern → World</p>
+</footer>
+
+<script>
+// Particles
+(function(){
+  const p=document.getElementById('particles');
+  for(let i=0;i<20;i++){
+    const d=document.createElement('div');
+    d.className='particle';
+    d.style.left=Math.random()*100+'%';
+    d.style.animationDelay=Math.random()*8+'s';
+    d.style.animationDuration=(4+Math.random()*6)+'s';
+    d.style.opacity=Math.random()*.7;
+    p.appendChild(d);
+  }
+})();
+
+// Nav
+function showSec(id,btn){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo(0,0);
+}
+
+// Topic Cards
+function toggleTC(c){c.classList.toggle('open');}
+function toggleQA(c){c.classList.toggle('open');}
+
+// FLASHCARD DATA
+const allFC=[
+  // ANCIENT
+  {cat:'Ancient',q:'When was the Indus Valley Civilisation at its peak and name 3 major sites.',a:'Peak: 2500–1750 BCE. Sites: Harappa (Pakistan), Mohenjo-daro (Pakistan, "Mound of Dead"), Lothal (Gujarat, has dockyard), Rakhigarhi (Haryana, largest in India), Dholavira (Gujarat).'},
+  {cat:'Ancient',q:'What is the Great Bath and where is it located?',a:'Great Bath is an elaborate bathing structure found at Mohenjo-daro. Considered a public bath or ritual purification tank. Size: 12m x 7m. Watertight with gypsum mortar. One of the earliest public water tanks in the ancient world.'},
+  {cat:'Ancient',q:'What are the four Vedas? Name one key text from each.',a:'1. Rigveda (hymns — 1028 suktas). 2. Samaveda (melodies, chants). 3. Yajurveda (sacrificial formulas). 4. Atharvaveda (magic spells, medicine). Key Upanishads: Brihadaranyaka, Chandogya, Mandukya.'},
+  {cat:'Ancient',q:'What were Sabha and Samiti in the Vedic period?',a:'Sabha: Assembly of elders/nobles (select). Samiti: General tribal assembly (broader). Both were democratic institutions in Rigvedic period. Later Vedic period saw their decline. The Rigveda mentions "Sabha" and "Samiti" as daughters of Prajapati.'},
+  {cat:'Ancient',q:'Name the four Noble Truths of Buddhism.',a:'1. Dukkha (Life is suffering). 2. Samudaya (Suffering has a cause — desire/attachment). 3. Nirodha (Suffering can end — Nirvana). 4. Magga (There is a path — Eightfold Path). First sermon at Sarnath (Dhammachakrapravartana).'},
+  {cat:'Ancient',q:'What are the five vows of Jainism?',a:'1. Ahimsa (Non-violence — most important). 2. Satya (Truthfulness). 3. Asteya (Non-stealing). 4. Brahmacharya (Celibacy). 5. Aparigraha (Non-possession). Mahavira added Brahmacharya to the existing 4 vows of Parshvanatha.'},
+  {cat:'Ancient',q:'Who was Megasthenes and what did he write?',a:'Megasthenes: Greek ambassador sent by Seleucus Nicator to court of Chandragupta Maurya (c.302 BCE). Wrote "Indica" — detailed account of Mauryan India. Describes Pataliputra (Patna), Mauryan administration, Indian society, Chandragupta\'s palace. Primary Greek source on ancient India.'},
+  {cat:'Ancient',q:'Name Ashoka\'s 14 Rock Edicts and what they describe.',a:'14 Major Rock Edicts describe: Dhamma policy, welfare of animals & humans, Ashoka\'s conversion after Kalinga, religious tolerance, treatment of subjects, boundary information. Found in Afghanistan (Kandahar), Pakistan, India. Inscribed in Brahmi (India), Kharosthi (NW), Greek/Aramaic (Afghanistan).'},
+  {cat:'Ancient',q:'What is the Arthashastra? Who wrote it?',a:'Arthashastra written by Kautilya/Chanakya/Vishnugupta (~4th BCE–3rd CE, scholarly debate). Treatise on statecraft, economic policy, military strategy. Saptanga Theory (7 elements of state: king, minister, country, fort, treasury, army, ally). Espionage system detailed. Rediscovered by R. Shamasastry in 1904.'},
+  {cat:'Ancient',q:'Who is called the "Napoleon of India" and why?',a:'Samudragupta (335–375 CE), second Gupta emperor. Given this title by historian V.A. Smith. Reason: Military conquests — fought across entire subcontinent, won battles in all directions. Allahabad Pillar inscription by court poet Harishena lists his conquests. Also a poet and musician.'},
+  {cat:'Ancient',q:'What is Nalanda? When was it established?',a:'Nalanda University: First residential international university in the world. Located near Rajgir, Bihar. Established ~5th century CE (possibly Kumaragupta I). Peak: 4th–12th century CE. Chinese travellers Fa-Hien, Xuanzang visited and described. Burnt by Bakhtiyar Khilji (1193 CE).'},
+  {cat:'Ancient',q:'Name 3 contributions of Aryabhata.',a:'1. Value of π (3.1416, accurate). 2. Earth rotates on its axis (not stars moving). 3. Solar year = 365.358 days (accurate). 4. Solar eclipse explanation. 5. Place value system. Aryabhatiya (499 CE) — his major work. From Pataliputra (modern Patna).'},
+  {cat:'Prelims',q:'What is Sarnath famous for in Buddhism?',a:'Sarnath (near Varanasi, UP): Where Gautama Buddha gave his first sermon (Dhammachakrapravartana = "Setting the wheel of Dharma in motion") after enlightenment at Bodh Gaya. Also site of Ashoka\'s Lion Capital (now India\'s national emblem). Dhamekh Stupa here marks first sermon spot.'},
+  {cat:'Prelims',q:'What does "Mahaparinirvana" mean? Where did it occur?',a:'Mahaparinirvana: Final Nirvana/death of the Buddha. Occurred at Kushinagar (UP, India) in 483 BCE. Buddha was 80 years old. Last words: "Decay is inherent in all composite things. Work out your salvation with diligence." Kushinagar is a major Buddhist pilgrimage site.'},
+
+  // MEDIEVAL
+  {cat:'Medieval',q:'What was the Iqta system in the Delhi Sultanate?',a:'Iqta: Revenue assignment given to military officials (Iqtadars) instead of salary. Iqtadar collected revenue from assigned territory, paid for troops, sent surplus to Sultan. Similar to European feudal fiefs. Introduced by Iltutmish. Could be transferred/cancelled unlike hereditary fiefdoms. Important administrative innovation.'},
+  {cat:'Medieval',q:'Name Alauddin Khilji\'s four market reforms.',a:'1. Grain Market (Mandi): Fixed prices for food grains. 2. Cloth Market (Sarai Adl): Fixed prices for cloth, cattle, livestock. 3. Horse Market: Fixed prices for horses (military need). 4. Market for Cattle and Slaves. Shahna (supervisor) + spies (munhiyan) monitored compliance. Severe punishment for violations.'},
+  {cat:'Medieval',q:'Why is Muhammad bin Tughlaq considered eccentric by historians?',a:'Three famous failures: 1. Token Currency — introduced copper coins (easily counterfeited) → had to withdraw. 2. Capital Shift Delhi→Daulatabad (700 km) — forced mass migration, many died. 3. Khorasan Plan — to conquer Khorasan (Afghanistan); raised huge army, then abandoned. Despite this, he was well-educated, knowledgeable. Ibn Battuta visited his court.'},
+  {cat:'Medieval',q:'What are the three battles of Panipat?',a:'1. Panipat I (1526): Babur vs Ibrahim Lodi → Mughals established. 2. Panipat II (1556): Akbar (Bairam Khan) vs Hemu → Mughals consolidated. 3. Panipat III (1761): Ahmad Shah Abdali vs Marathas → Marathas severely weakened. All three are turning points in Indian history.'},
+  {cat:'Medieval',q:'What was the Mansabdari system under Akbar?',a:'Mansab = rank/position. Every official was a mansabdar with two ranks: Zat (personal rank, salary) and Sawar (cavalry rank, number of horses+soldiers to maintain). Grades: 10 to 10,000 (princes up to 30,000). No hereditary. Emperor could promote/demote. Foundation of Mughal military-administrative system.'},
+  {cat:'Medieval',q:'Name the Navratna (Nine Gems) of Akbar\'s court.',a:'1. Abul Fazl (Akbarnama, Ain-i-Akbari). 2. Faizi (poet, Abul Fazl\'s brother). 3. Tansen (musician). 4. Birbal (minister, wit). 5. Todar Mal (revenue system). 6. Man Singh (military general, Rajput). 7. Abdul Rahim Khan-i-Khana (poet). 8. Fakir Aziao-Din. 9. Mulla Do Piaza.'},
+  {cat:'Medieval',q:'What was Din-i-Ilahi? Who founded it?',a:'Din-i-Ilahi ("Divine Faith"): Syncretic religion founded by Akbar in 1582. Blended elements from Islam, Hinduism, Zoroastrianism, Christianity, Jainism. God-centered, no prophet, no scripture. Members (only 18 known) greeted with "Allahu Akbar" (could mean "God is great" OR "Akbar is God"). Birbal = only Hindu member. Died with Akbar.'},
+  {cat:'Medieval',q:'What is Sulh-i-kul? How did Akbar implement it?',a:'Sulh-i-kul = "Peace with all" / Universal tolerance. Akbar\'s principle of religious tolerance. Implementation: Abolished Jizya (1564), pilgrim tax. Ibadat Khana (1575) — house of worship for inter-religious debates. Celebrated Hindu festivals. Married Rajput princesses (Jodha Bai). All religions treated equally in court.'},
+  {cat:'Medieval',q:'Name four famous Sufi saints and their silsilas.',a:'1. Moinuddin Chishti (Ajmer) — Chishti order. 2. Nizamuddin Auliya (Delhi) — Chishti. 3. Bahauddin Zakariya (Multan) — Suhrawardi. 4. Qutbuddin Bakhtiyar Kaki (Delhi) — Chishti. Chishti = most popular in India; did not accept state patronage; lived among poor. Dargahs became centres of communal harmony.'},
+  {cat:'Medieval',q:'Who was Krishnadevaraya? What is he famous for?',a:'Krishnadevaraya (1509–1529): Greatest ruler of Vijayanagara Empire. Capital: Hampi (Karnataka). Famous for: Military victories against Bahmani Sultans+Odisha. Patron of Telugu literature golden age. Himself a scholar — wrote Amuktamalyada (Telugu). Court had eight poets ("Ashtadiggajas"). Maintained close ties with Portuguese.'},
+  {cat:'Medieval',q:'What was Shivaji\'s Ashtapradhan?',a:'Ashtapradhan = Council of Eight Ministers. 1. Peshwa (PM/Finance). 2. Amatya (Finance/Revenue). 3. Sachiv (Correspondence). 4. Mantri (Home/Intelligence). 5. Senapati (Military chief). 6. Sumant (Foreign/Protocol). 7. Nyayadhish (Justice). 8. Panditrao (Religious). Peshwa became most powerful after Shivaji. Post of Peshwa became hereditary under Bhat family.'},
+  {cat:'Medieval',q:'What were Chauth and Sardeshmukhi?',a:'Chauth: 1/4 (25%) of total revenue of a territory collected by Marathas from non-Maratha areas as "protection money." Sardeshmukhi: Additional 10% tax on top of Chauth, claimed by Marathas as hereditary rights as revenue superintendents. Total = 35% additional tax burden. Enabled Maratha empire to expand without permanent occupation.'},
+
+  // MODERN
+  {cat:'Modern',q:'What is the Drain of Wealth theory? Who proposed it?',a:'Drain of Wealth: Economic exploitation where India\'s wealth was systematically transferred to Britain. Proposed by Dadabhai Naoroji in "Poverty and Un-British Rule in India" (1901). Also elaborated by R.C. Dutt. Mechanisms: Home charges, one-way trade, unrequited exports. Naoroji estimated £200 million drained annually. Foundation of economic critique of British rule.'},
+  {cat:'Modern',q:'What was the Doctrine of Lapse? Name states that were annexed.',a:'Doctrine of Lapse (Lord Dalhousie, 1848): If a ruler died without natural heir, state "lapsed" to British. No adoption allowed without prior approval. Annexed: Satara (1848), Jaipur (1849, later restored), Sambalpur (1849), Baghat (1850), Udaipur (1852), Jhansi (1853), Nagpur (1854), Awadh (1856 — by misgovernment). Major cause of 1857 revolt.'},
+  {cat:'Modern',q:'Name the four causes of the Revolt of 1857.',a:'Political: Doctrine of Lapse, Subsidiary Alliance. Economic: Drain of wealth, deindustrialisation, land revenue. Socio-Religious: Greased cartridges, perceived threat to religion (General Service Enlistment Act), conversion activities. Military: Low salaries, racial discrimination (European officers), Enfield rifle controversy (pig+cow grease cartridges).'},
+  {cat:'Modern',q:'Who were Lal-Bal-Pal? What did they represent?',a:'Lal (Lala Lajpat Rai, Punjab), Bal (Bal Gangadhar Tilak, Maharashtra), Pal (Bipin Chandra Pal, Bengal). Extremist/militant leaders of Congress. Led by Tilak\'s slogan "Swaraj is my birthright and I shall have it." Advocated: Boycott, Swadeshi, Swaraj, National education. Dominated INC 1905–1920.'},
+  {cat:'Modern',q:'What happened at Chauri Chaura? Why was it significant?',a:'Chauri Chaura (Feb 4, 1922, UP): Crowd of protesters attacked and burnt a police station killing 23 policemen. Gandhi, horrified at violence, unilaterally suspended the Non-Cooperation Movement. Controversy: Nehru, other leaders opposed suspension. Shows Gandhi\'s strict commitment to non-violence even at political cost.'},
+  {cat:'Modern',q:'What was the Dandi March? Give complete details.',a:'Dandi March (Salt Satyagraha): Gandhi marched 241 miles from Sabarmati Ashram (Ahmedabad) to Dandi (Gujarat coast), March 12 – April 6, 1930. Started with 78 followers. Picked up salt on April 6, 1930 → broke Salt Laws. Triggered Civil Disobedience Movement. Time magazine featured Gandhi. Over 60,000 arrested. International attention brought to India\'s cause.'},
+  {cat:'Modern',q:'What were the Round Table Conferences?',a:'1st RTC (1930, London): Congress boycotted (in jail/movement). Failed. 2nd RTC (1931): Gandhi attended after Gandhi-Irwin Pact. Disagreement on communal representation. Failed. 3rd RTC (1932): Congress again boycotted. Led to Communal Award (1932) by Ramsay MacDonald → Poona Pact (Gandhi-Ambedkar agreement on reserved seats).'},
+  {cat:'Modern',q:'What was the significance of the Government of India Act 1935?',a:'Most comprehensive constitutional document before independence. Features: Federal structure (Centre+Provinces). Provincial Autonomy — elected governments in 11 provinces. Bicameral legislature (Centre). Diarchy at Centre (retained certain powers). Reserved Burma from India. Basis for 1947 Indian Independence Act and 1950 Constitution of India. Congress won 1937 elections under this.'},
+  {cat:'Modern',q:'Who was Subhas Chandra Bose? What was INA?',a:'Subhas Chandra Bose (Netaji): Two-time Congress president (1938, 1939). Resigned due to differences with Gandhi. Escaped India (1941), went to Germany then Japan. Founded Indian National Army (Azad Hind Fauj) in Singapore (1943) from POWs + Indian diaspora. Slogan: "Give me blood, I\'ll give you freedom." "Delhi Chalo." Died Aug 18, 1945 (air crash, Taipei — disputed). INA trials at Red Fort created national sentiment.'},
+  {cat:'Modern',q:'What was the Cabinet Mission Plan (1946)?',a:'British Cabinet Mission (Pethick-Lawrence, Stafford Cripps, A.V. Alexander) visited India 1946. Proposed: 3-tier federal structure. Provinces grouped into 3 sections (A: Hindu majority, B: Muslim majority NW, C: Muslim majority NE Bengal+Assam). Rejected Pakistan. Rejected by Jinnah; Congress ambiguous. Led to Direct Action Day (Aug 16, 1946). Communal violence. Eventually partition accepted.'},
+  {cat:'Modern',q:'What was the Quit India Movement? Give key facts.',a:'August 8, 1942, Bombay: Gandhi\'s call "Do or Die" (Karo ya Maro). All-India Congress Committee resolution. All leaders arrested immediately. Underground leadership: Jay Prakash Narayan, Aruna Asaf Ali (hoisted flag, Gowalia Tank, Bombay). Parallel governments in Satara (Maharashtra), Midnapore (Bengal), Ballia (UP). British response: Harshest repression. 100,000+ arrested.'},
+  {cat:'Modern',q:'What was the Jallianwala Bagh Massacre?',a:'April 13, 1919 (Baisakhi Day), Amritsar. Unarmed crowd gathered at Jallianwala Bagh (walled garden). General Reginald Dyer ordered troops to fire without warning. Fired 1,650 rounds. Official death toll: 379. Congress estimate: 1,000+. Udham Singh avenged it by killing Michael O\'Dwyer (1940, London). Tagore returned knighthood. Turned many moderates into nationalists.'},
+  {cat:'Modern',q:'Name 4 important social reform acts of British India.',a:'1. Sati Abolition Act 1829 (Bentinck, after Ram Mohan Roy campaign). 2. Hindu Widows Remarriage Act 1856 (Vidyasagar). 3. Age of Consent Act 1891 (raised marriage age to 12 for girls). 4. Sarda Act 1929 (Child Marriage Restraint Act, minimum age: girls 14, boys 18). All achieved through combination of reformers + sympathetic British officials.'},
+  {cat:'Modern',q:'What is Partition of Bengal (1905)? Why is it significant?',a:'Lord Curzon partitioned Bengal (Oct 16, 1905) into Bengal (West, Hindu majority) + Eastern Bengal & Assam (Muslim majority). Official reason: Administrative efficiency. Real motive: Divide Hindu-Muslim unity (divide and rule). Triggered Swadeshi Movement. Massive protests (boycott British goods). Reunification in 1911 (King George V announcement, Delhi Durbar). First true mass movement in India.'},
+  {cat:'Modern',q:'What was Subsidiary Alliance? Who created it?',a:'Subsidiary Alliance created by Lord Wellesley (1798). Terms: Indian ruler must maintain British troops in his territory and pay for them. In return, British protect ruler from external aggression. Ruler cannot make treaties with others without British permission. If ruler can\'t pay → cede territory. First signed: Hyderabad (1798). Expanded British control without direct war.'},
+
+  // WORLD
+  {cat:'World',q:'What was the immediate cause of World War I?',a:'Immediate Cause: Assassination of Archduke Franz Ferdinand (heir to Austro-Hungarian throne) in Sarajevo, Bosnia, on June 28, 1914, by Gavrilo Princip (Bosnian-Serb nationalist). Austria blamed Serbia → ultimatum → Serbia rejected → Austria declared war (July 28) → alliance system dragged others in within weeks.'},
+  {cat:'World',q:'What was the Treaty of Versailles? Why is it important?',a:'Treaty of Versailles (June 28, 1919): Ended WWI. Humiliated Germany: War Guilt Clause (Article 231, Germany solely blamed). Reparations: $33 billion. Lost 13% territory (Alsace-Lorraine to France, Polish Corridor). Army limited to 100,000. Rhineland demilitarised. Directly led to rise of Hitler and WWII. Wilson\'s 14 Points partly incorporated (League of Nations formed, but USA didn\'t join!).'},
+  {cat:'World',q:'What was the Russian Revolution of 1917? Two phases?',a:'February Revolution (Feb/March 1917): Tsar Nicholas II abdicated. Provisional Government (Kerensky) formed. October Revolution (Oct/Nov 1917): Lenin\'s Bolsheviks (Marxists) seized power. Slogan: "Peace, Land, Bread" + "All power to Soviets." Soviet Union formed 1922. World\'s first communist state. Inspired global communist movements. Deeply influenced Indian nationalist thinking (Bhagat Singh, etc.).'},
+  {cat:'World',q:'What was the Holocaust? Give statistics.',a:'Holocaust: Systematic, state-sponsored genocide of 6 million Jews (2/3 of European Jews) by Nazi Germany under Hitler (1933–1945). Also killed: Roma (500,000+), disabled people, Soviet POWs, homosexuals, Jehovah\'s Witnesses. Method: Concentration camps (Auschwitz, Treblinka, Sobibor), gas chambers, mass shootings, starvation. Led to establishment of Israel (1948) and International genocide law.'},
+  {cat:'World',q:'What is the Cold War? Main events?',a:'Cold War (1947–1991): Ideological conflict between USA (capitalism, NATO) vs USSR (communism, Warsaw Pact). Never direct military conflict (hence "cold"). Key events: Berlin Blockade (1948), Korean War (1950–53), Cuban Missile Crisis (1962 — closest to nuclear war), Vietnam War (1955–75), Soviet-Afghan War (1979–89), Berlin Wall fell (1989), USSR dissolved (1991). NAM = India\'s response.'},
+  {cat:'World',q:'What was the French Revolution? Key phases?',a:'French Revolution (1789–1799). Phases: 1. Moderate (1789–92): Constitutional monarchy, Declaration of Rights of Man. 2. Radical (1792–94): Republic declared, Louis XVI guillotined, Reign of Terror (Robespierre, Committee of Public Safety). 3. Thermidorian (1794–99): Robespierre executed, Directory. 4. Napoleon (1799–1815): Coup → Consulate → Emperor. Legacy: Liberty, Equality, Fraternity; nationalism across Europe.'},
+  {cat:'World',q:'What was the Non-Aligned Movement (NAM)? Founders?',a:'NAM: Movement of countries that refused to align with either USA (NATO) or USSR (Warsaw Pact) during Cold War. Founded 1961, Belgrade Conference. Founding leaders: Jawaharlal Nehru (India), Gamal Abdel Nasser (Egypt), Josip Broz Tito (Yugoslavia), Sukarno (Indonesia), Kwame Nkrumah (Ghana). 120+ member nations today. India hosted 7th NAM Summit (New Delhi, 1983).'},
+  {cat:'World',q:'What was the Marshall Plan?',a:'Marshall Plan (European Recovery Program, 1948–1952): USA provided $13 billion (later calculated much more) in economic aid to rebuild Western European economies after WWII. Proposed by Secretary of State George Marshall (1947). Goal: Prevent European countries from turning communist due to poverty. Very successful — Western Europe recovered quickly. USSR rejected plan for itself and satellite states. Deepened Cold War divide.'},
+  {cat:'World',q:'What is decolonisation? Key examples?',a:'Decolonisation: Process by which Asian and African colonies gained independence from European powers (primarily 1945–1970). Causes: WWII weakened colonial powers, Atlantic Charter (1941) promised self-determination, UN Charter, nationalist movements. Key examples: India (1947), Israel (1948), Indonesia (1945), Ghana (1957 — first sub-Saharan), Congo (1960), Zimbabwe (1980), Hong Kong returned to China (1997).'},
+  {cat:'World',q:'What was the significance of the American Declaration of Independence?',a:'Declaration of Independence (July 4, 1776, Thomas Jefferson): "All men are created equal, endowed by their Creator with certain unalienable Rights — Life, Liberty, Pursuit of Happiness." First modern democratic republic. Influenced by Enlightenment (Locke\'s Social Contract, Montesquieu\'s Separation of Powers). Inspired French Revolution, Latin American revolutions, and Indian constitutional thought.'},
+
+  // PRELIMS FACTS
+  {cat:'Prelims',q:'Match: First Battle of Plassey, Buxar, Panipat I, Panipat II.',a:'Plassey (1757): Clive vs Siraj-ud-Daulah (Bengal). Buxar (1764): Munro vs Mir Qasim+Shah Alam+Shuja-ud-Daulah. Panipat I (1526): Babur vs Ibrahim Lodi. Panipat II (1556): Akbar (Bairam Khan) vs Hemu. Panipat III (1761): Ahmad Shah Abdali vs Marathas.'},
+  {cat:'Prelims',q:'Name the Viceroy during Jallianwala Bagh massacre and Partition of Bengal.',a:'Jallianwala Bagh (1919): Viceroy was Lord Chelmsford (General Dyer gave orders). Lieutenant Governor of Punjab: Michael O\'Dwyer (approved Dyer\'s action). Partition of Bengal (1905): Viceroy was Lord Curzon. Reunification (1911): Lord Hardinge.'},
+  {cat:'Prelims',q:'What is the chronological order of Gandhian movements?',a:'1. Champaran (1917). 2. Kheda (1918). 3. Ahmedabad Mill Strike (1918). 4. Rowlatt Satyagraha (1919). 5. Non-Cooperation Movement (1920–22). 6. Civil Disobedience/Dandi March (1930). 7. Individual Satyagraha (1940). 8. Quit India Movement (1942). Each successive movement was broader and more inclusive.'},
+  {cat:'Prelims',q:'Who wrote these books? Match correctly.',a:'Indica → Megasthenes. Baburnama → Babur. Ain-i-Akbari → Abul Fazl. Akbarnama → Abul Fazl. Tuzuk-i-Jahangiri → Jahangir. Kitab-ul-Hind → Alberuni. Poverty and Un-British Rule → Dadabhai Naoroji. Hind Swaraj → Gandhi (1909). Discovery of India → Nehru.'},
+  {cat:'Prelims',q:'What were the three Carnatic Wars?',a:'1st Carnatic War (1746–48): Dupleix (French) vs British. Battle of Adyar. 2nd Carnatic War (1749–54): Dupleix vs Robert Clive. 3rd Carnatic War (1758–63): Lally (French) vs Coote (British). British won Battle of Wandiwash (1760). French power ended in India. English dominance established.'},
+  {cat:'Prelims',q:'What is the Rowlatt Act (1919)?',a:'Rowlatt Act (Black Act, Feb 1919): Authorised government to imprison any person suspected of terrorism without trial. Extension of Defence of India Act (WWI era). Gandhi called it "Black Act." Triggered Rowlatt Satyagraha (first all-India satyagraha). Led to Jallianwala Bagh massacre. Galvanised Indian nationalist opinion. Nehru: "The spark that lit the fire."'},
+  {cat:'Prelims',q:'What is the Poona Pact (1932)?',a:'Poona Pact (Sept 24, 1932): Agreement between Gandhi and B.R. Ambedkar. Context: British Communal Award gave Dalits separate electorate. Gandhi fasted unto death against separate electorate (feared it would divide Hindu society). Ambedkar accepted: Dalits would vote in general Hindu electorate BUT with reserved seats (increased from 71 to 148). Gandhi broke fast. Controversial — Ambedkar later called it a "betrayal."'},
+  {cat:'Prelims',q:'Who was Swami Vivekananda? His famous speech?',a:'Swami Vivekananda (1863–1902): Disciple of Ramakrishna Paramahamsa. Founded Ramakrishna Mission (1897). Chicago Address (September 11, 1893, Parliament of World\'s Religions): "Sisters and Brothers of America" — first time western audience moved by an Indian religious figure. Presented Hinduism as universal religion. Also emphasised: "Service to man is service to God."'},
+  {cat:'Prelims',q:'What was the Simon Commission? Why was it boycotted?',a:'Simon Commission (1927): 7-member British Parliamentary Commission to review 1919 Act and recommend constitutional reforms. Headed by Sir John Simon. All 7 members were British — no Indian representation. Hence boycotted by all Indian political parties. "Simon Go Back!" protests nationwide. Lala Lajpat Rai assaulted at Lahore protest (died later). Led to Nehru Report (1928) — Indians\' own constitutional proposals.'},
+  {cat:'Prelims',q:'Name 5 major leaders of the 1857 Revolt and their centres.',a:'1. Bahadur Shah Zafar (last Mughal, Delhi — symbolic leader). 2. Nana Sahib/Peshwa (Kanpur). 3. Begum Hazrat Mahal (Lucknow). 4. Rani Lakshmi Bai of Jhansi (died June 1858, "Manikarnika"). 5. Kunwar Singh (Bihar — oldest at 80, fought brilliantly). 6. Bakht Khan (military leader, Delhi). 7. Khan Bahadur Khan (Bareilly).'},
+  {cat:'Prelims',q:'What were the Regulating Act 1773 and Pitt\'s India Act 1784?',a:'Regulating Act 1773: First attempt by British Parliament to regulate EIC affairs. Created post of Governor-General (Warren Hastings = first). Supreme Court at Calcutta. Pitt\'s India Act 1784: Established Board of Control (political oversight) alongside Court of Directors (commercial). Dual control. Governor-General given more powers. Foundation of British India\'s governance structure.'},
+  {cat:'Prelims',q:'Name the Governors-General/Viceroys associated with key events.',a:'Cornwallis → Permanent Settlement (1793). Bentinck → Sati abolished (1829), English education (1835). Dalhousie → Railway, telegraph, Doctrine of Lapse. Mayo → First census, killed by Afghan. Ripon → Local Self Government (1882). Curzon → Bengal Partition (1905). Hardinge → Bengal Reunification (1911). Chelmsford → Jallianwala Bagh (1919). Mountbatten → Independence (1947).'},
+];
+
+let filteredFC=[...allFC];
+let fcIdx=0;
+
+function filterFC(cat,btn){
+  document.querySelectorAll('.fc-filter').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  filteredFC=cat==='All'?[...allFC]:allFC.filter(f=>f.cat===cat);
+  fcIdx=0;
+  showFC();
+}
+function showFC(){
+  const card=document.getElementById('fcCard');
+  card.classList.remove('flip');
+  const c=filteredFC[fcIdx];
+  document.getElementById('fcQ').textContent=c.q;
+  document.getElementById('fcA').textContent=c.a;
+  document.getElementById('fcCat').textContent=c.cat;
+  document.getElementById('fcLabel').textContent='Card '+(fcIdx+1)+' of '+filteredFC.length;
+  const pct=Math.round(((fcIdx+1)/filteredFC.length)*100);
+  document.getElementById('fcBar').style.width=pct+'%';
+}
+function flipFC(){document.getElementById('fcCard').classList.toggle('flip');}
+function nextFC(){fcIdx=(fcIdx+1)%filteredFC.length;showFC();}
+function prevFC(){fcIdx=(fcIdx-1+filteredFC.length)%filteredFC.length;showFC();}
+
+document.addEventListener('keydown',function(e){
+  if(!document.getElementById('flashcards').classList.contains('active'))return;
+  if(e.key==='ArrowRight')nextFC();
+  if(e.key==='ArrowLeft')prevFC();
+  if(e.key===' '){e.preventDefault();flipFC();}
+});
+setTimeout(showFC,300);
+</script>
+</body>
+</html>
